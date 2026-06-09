@@ -1,275 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMKYA | Online Fitness, Nutrition & Life Coaching | Sustainable Transformation</title>
-<meta name="description" content="SMKYA offers personalised online fitness coaching, nutritional guidance, and life coaching with Samaakhya Gajanaayke. Real results. Sustainable change. Book a free consultation today.">
-<link rel="canonical" href="https://www.smkya.com/">
-<meta property="og:title" content="SMKYA | Online Fitness, Nutrition & Life Coaching">
-<meta property="og:description" content="Personalised online coaching combining fitness, nutrition, and life coaching. Sustainable change with Samaakhya Gajanaayke.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.smkya.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMKYA | Build your body, mind & life sustainably.</title>
+  <meta name="description" content="SMKYA is a holistic online coaching practice built around fitness, nutrition, and mindset run by Samaakhya Gajanaayke. A programme designed around who you are.">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "SMKYA",
-  "alternateName": "Samaakhya Fitness and Life Coaching",
-  "url": "https://www.smkya.com/",
-  "logo": "https://www.smkya.com/logo.png",
-  "telephone": "+94721499479",
-  "email": "info@smkya.com",
-  "founder": {
-    "@type": "Person",
-    "name": "Samaakhya Gajanaayke"
-  },
-  "sameAs": [
-    "https://www.facebook.com/smkya.life",
-    "https://www.instagram.com/samaakhya",
-    "https://www.youtube.com/@samaakhya",
-    "https://www.linkedin.com/company/smkya"
-  ]
-}
-</script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
 </head>
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">SMKYA<span class="dot">.</span></a>
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Services</a>
-          <ul class="dropdown-menu">
-            <li><a href="services/life-coaching.html">Life Coaching</a></li>
-            <li><a href="services/fitness-coaching.html">Fitness Coaching</a></li>
-            <li><a href="services/nutrition.html">Nutritional Guidance</a></li>
-          </ul>
-        </li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <!-- HEADER -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        SMKYA<span>.</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section class="hero" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600');" aria-label="Hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="eyebrow">Online Coaching · Fitness · Nutrition · Life Coaching</span>
-      <h1>Stop Surviving. Start Thriving - Mind, Body &amp; Life.</h1>
-      <p>SMKYA is a personalised online coaching platform combining fitness, nutrition, and psychology. Built for people who want lasting change, not another crash program.</p>
-      <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-gold btn-large">Get in Touch</a>
-        <a href="#services" class="btn btn-ghost btn-large">Explore Our Services</a>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-accent btn-sm" style="padding: 10px 20px;">Start</a>
+        <button class="hamburger" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- STATS -->
-<section class="stats" aria-label="Credibility">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat reveal"><strong>10+ Years</strong><span>Coaching Experience</span></div>
-      <div class="stat reveal"><strong>International</strong><span>Competitive Athlete</span></div>
-      <div class="stat reveal"><strong>3 Pillars</strong><span>Fitness · Nutrition · Mind</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT INTRO -->
-<section>
-  <div class="container">
-    <div class="two-col">
-      <div class="reveal">
-        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=900" alt="Portrait of Samaakhya, founder of SMKYA wellness coaching" loading="lazy">
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Meet Your Coach</span>
-        <h2>Meet Samaakhya - The Coach Who Trains the Whole Person</h2>
-        <p style="margin: 18px 0 24px; color: var(--muted);">Samaakhya Gajanaayke isn't your average personal trainer. As a decorated international-level athlete with over a decade of coaching experience, she built SMKYA on one core belief: true fitness is inseparable from mental strength and balanced living. Her approach is built on three pillars - movement, nourishment, and mindset - because she's seen firsthand that physical results without inner work never last.</p>
-        <a href="about.html" class="btn btn-primary">Learn More About Samaakhya</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" style="background: var(--forest-dark);">
-  <div class="container">
-    <h2 class="section-title reveal">What We Offer</h2>
-    <p class="section-sub reveal">Three integrated services. One clear direction.</p>
-    <div class="grid-3">
-      <article class="card reveal">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600" alt="Life coaching session" loading="lazy">
-        <div class="card-body">
-          <h3>Life Coaching</h3>
-          <p>Feeling stuck, burnt out, or disconnected? Private online coaching to rebuild clarity, confidence, and direction - at your own pace.</p>
-          <a href="services/life-coaching.html" class="btn btn-primary">Explore Life Coaching</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-left">
+        <div class="hero-promo-badge">
+          <span>Holistic Coaching</span> Fitness, Nutrition & Mindset
         </div>
-      </article>
-      <article class="card reveal">
-        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600" alt="Personalised fitness training" loading="lazy">
-        <div class="card-body">
-          <h3>Fitness Coaching</h3>
-          <p>No cookie-cutter programs. Every SMKYA workout plan is built around your body, schedule, history, and goals. Train for function, strength, and longevity.</p>
-          <a href="services/fitness-coaching.html" class="btn btn-primary">Explore Fitness Coaching</a>
-        </div>
-      </article>
-      <article class="card reveal">
-        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600" alt="Healthy nutritional guidance" loading="lazy">
-        <div class="card-body">
-          <h3>Nutritional Guidance</h3>
-          <p>Ditch diet culture. Your nutrition plan is built around your real life - your culture, schedule, and stress - so you can eat with confidence and no guilt.</p>
-          <a href="services/nutrition.html" class="btn btn-primary">Explore Nutrition Guidance</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section>
-  <div class="container">
-    <h2 class="section-title reveal">How SMKYA Works</h2>
-    <p class="section-sub reveal">Three simple steps from where you are to where you want to be.</p>
-    <div class="steps">
-      <div class="step reveal">
-        <span class="step-num">01</span>
-        <h3>Get in Touch</h3>
-        <p>Tell us your goals and where you feel stuck. No pressure.</p>
-      </div>
-      <div class="step reveal">
-        <span class="step-num">02</span>
-        <h3>Get Your Custom Plan</h3>
-        <p>Personalised across fitness, nutrition, and/or mindset. Never templated.</p>
-      </div>
-      <div class="step reveal">
-        <span class="step-num">03</span>
-        <h3>Transform, Sustainably</h3>
-        <p>Ongoing support, check-ins, and accountability that actually sticks.</p>
-      </div>
-    </div>
-    <div class="center">
-      <a href="contact.html" class="btn btn-gold btn-large">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section style="background: var(--forest-dark);">
-  <div class="container">
-    <h2 class="section-title reveal">Real People. Real Results.</h2>
-    <p class="section-sub reveal">Words from clients building stronger lives with SMKYA.</p>
-    <div class="grid-2">
-      <article class="testimonial reveal">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"It was never just about physical appearance - it was about how movement supports mental strength, confidence, and overall wellbeing. She didn't just train my body - she helped me trust it."</p>
-        <div class="testimonial-author">Denise Hakel</div>
-        <div class="testimonial-meta">Google Review · 3 months ago</div>
-      </article>
-      <article class="testimonial reveal">
-        <p class="testimonial-quote">"SMKYA offers the most flexible workout plans that fit perfectly into your schedule. It trains you to engage in your workouts in a mindful way. Highly recommend!"</p>
-        <div class="testimonial-author">Narthanie Serasinghe</div>
-        <div class="testimonial-meta">Facebook Review</div>
-      </article>
-      <article class="testimonial reveal">
-        <p class="testimonial-quote">"Samaakhya had me out of bed at 6am and working out. She genuinely wants to see you live your best life."</p>
-        <div class="testimonial-author">Theruni Galagedera</div>
-        <div class="testimonial-meta">Facebook Review</div>
-      </article>
-      <article class="testimonial reveal">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-quote">"SMKYA not only helped my knee pain but improved my mental health. I'm the fittest and happiest I've ever been."</p>
-        <div class="testimonial-author">Suzan G</div>
-        <div class="testimonial-meta">Google Review</div>
-      </article>
-      <article class="testimonial reveal" style="grid-column: 1 / -1;">
-        <p class="testimonial-quote">"She tailors everything to your capabilities, goals, lifestyle and fitness level. Not a 'one size fits all' program at all."</p>
-        <div class="testimonial-author">Zainab Ousman</div>
-        <div class="testimonial-meta">Google Review · Toronto</div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-block reveal" aria-label="Get Started">
-  <div class="container">
-    <h2>Ready to Begin Your Best Chapter?</h2>
-    <p>You don't need to have it figured out. Just take one step - we'll handle the rest, together.</p>
-    <div class="cta-contact">
-      📱 <a href="https://wa.me/94721499479">+94 72 149 9479</a> &nbsp;·&nbsp;
-      ✉️ <a href="mailto:info@smkya.com">info@smkya.com</a> / <a href="mailto:hello@smkya.com">hello@smkya.com</a>
-    </div>
-    <a href="contact.html" class="btn btn-gold btn-large">Get in Touch</a>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="logo">SMKYA<span class="dot">.</span></div>
-        <p class="footer-tagline">BE UNSTOPPABLE. BE MORE.</p>
-        <p style="color: var(--muted); font-size: 0.9rem;">Personalised online fitness, nutrition &amp; life coaching with Samaakhya Gajanaayke.</p>
-        <div class="socials" aria-label="Social media">
-          <a href="https://facebook.com/smkya.life" aria-label="Facebook">f</a>
-          <a href="https://instagram.com/samaakhya" aria-label="Instagram">ig</a>
-          <a href="https://youtube.com/@samaakhya" aria-label="YouTube">yt</a>
-          <a href="https://linkedin.com/company/smkya" aria-label="LinkedIn">in</a>
+        <h1 class="hero-title">
+          Build your body,
+          <span>mind & life</span>
+          sustainably.
+        </h1>
+        <p class="hero-description">
+          SMKYA is a holistic coaching practice built around fitness, nutrition, and mindset. A programme designed around who you are and where you genuinely want to go.
+        </p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
+          <a href="services.html" class="btn btn-outline">Explore Services</a>
         </div>
       </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services/life-coaching.html">Life Coaching</a></li>
-          <li><a href="services/fitness-coaching.html">Fitness Coaching</a></li>
-          <li><a href="services/nutrition.html">Nutritional Guidance</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:info@smkya.com">info@smkya.com</a></li>
-          <li><a href="mailto:hello@smkya.com">hello@smkya.com</a></li>
-          <li><a href="https://wa.me/94721499479">+94 72 149 9479</a></li>
-        </ul>
+      <div class="hero-image-wrapper reveal-right" style="transition-delay: 0.2s;">
+        <!-- Using a high quality fitness portrait placeholder -->
+        <img src="https://placehold.co/1600x500/1c1c1f/00d8ff?text=Fitness+Training+Coaching" alt="Fitness Training Coaching" width="1600" height="500" decoding="async">
+        <div class="hero-floating-card">
+          <div class="icon-box">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div class="card-text">
+            <h4>Pillars of Growth</h4>
+            <p>Body · Mind · Lifestyle</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2026 SMKYA. All rights reserved. · <a href="#">Privacy Policy</a>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<script src="script.js"></script>
+  
+
+  <!-- WHY SMKYA IS DIFFERENT -->
+  <section class="about" id="why-smkya" style="background-color: var(--bg-black);">
+    <div class="container about-grid">
+      <div class="about-images reveal-left">
+        <div class="about-img-main">
+          <img src="https://placehold.co/900x500/1c1c1f/00d8ff?text=Samaakhya+coaching+session" alt="Samaakhya coaching session" width="900" height="500" decoding="async" loading="lazy">
+        </div>
+        <div class="about-stat-box" style="grid-column: 1 / span 2; padding: 24px;">
+          <h3>3 PILLARS</h3>
+          <p>Movement · Nourishment · Mindset</p>
+        </div>
+      </div>
+      <div class="about-content reveal-right" style="transition-delay: 0.2s;">
+        <span class="eyebrow">The SMKYA Difference</span>
+        <h2>You do not need another plan you cannot stick to.</h2>
+        <p class="about-text">
+          Most people do not struggle because they lack another plan. They struggle because the plan does not fit their body, lifestyle, stress, mindset or the season of life they are in.
+        </p>
+        <p class="about-text" style="color: var(--text-muted); font-size: 0.95rem; margin-top: -16px; margin-bottom: 32px;">
+          At SMKYA, transformation starts with understanding you. From there, we build a path that supports the full person, not just the physical result.
+        </p>
+        <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="center reveal-fade">
+        <span class="eyebrow" style="justify-content: center;">Services Overview</span>
+        <h2 class="section-title" style="margin: 0 auto 20px;">A holistic approach to transformation.</h2>
+        <p class="section-subtitle" style="margin: 0 auto 56px;">Your body, mind and lifestyle are connected. That is why SMKYA brings fitness, nutrition, mindset and life coaching together in one supportive coaching experience.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Fitness Coaching -->
+        <div class="service-card reveal-card-up">
+          <div class="service-img-wrapper">
+            <img src="https://placehold.co/1200x1346/1c1c1f/00d8ff?text=Fitness+Training+Session" alt="Fitness Training Session" width="1200" height="1346" decoding="async" loading="lazy">
+            <span class="service-tag">Fitness</span>
+          </div>
+          <div class="service-body">
+            <h3>Fitness Coaching</h3>
+            <p>Personalised training that supports strength, mobility, endurance, confidence and lifestyle.</p>
+            <a href="services.html#fitness" class="service-link">View Details <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- Nutritional Guidance -->
+        <div class="service-card reveal-card-down" style="transition-delay: 0.1s;">
+          <div class="service-img-wrapper">
+            <img src="https://placehold.co/1200x1346/1c1c1f/00d8ff?text=Weight+Loss+Training" alt="Weight Loss Training" width="1200" height="1346" decoding="async" loading="lazy">
+            <span class="service-tag">Nutrition</span>
+          </div>
+          <div class="service-body">
+            <h3>Nutritional Guidance</h3>
+            <p>Practical nutrition support that helps build healthier habits without extreme restriction.</p>
+            <a href="services.html#nutrition" class="service-link">View Details <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- Mindset Support -->
+        <div class="service-card reveal-card-up" style="transition-delay: 0.2s;">
+          <div class="service-img-wrapper">
+            <img src="https://placehold.co/1200x1346/1c1c1f/00d8ff?text=Yoga+Class" alt="Yoga Class" width="1200" height="1346" decoding="async" loading="lazy">
+            <span class="service-tag">Mindset</span>
+          </div>
+          <div class="service-body">
+            <h3>Mindset Support</h3>
+            <p>Guidance to understand motivation, build discipline and reconnect with your goals.</p>
+            <a href="services.html#mindset" class="service-link">View Details <span>&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- Life Coaching -->
+        <div class="service-card reveal-card-down" style="transition-delay: 0.3s;">
+          <div class="service-img-wrapper">
+            <img src="https://placehold.co/1200x1346/1c1c1f/00d8ff?text=Fitness+Class" alt="Fitness Class" width="1200" height="1346" decoding="async" loading="lazy">
+            <span class="service-tag">Life</span>
+          </div>
+          <div class="service-body">
+            <h3>Life Coaching</h3>
+            <p>Support for people navigating stress, burnout, low confidence, life transitions, or a persistent feeling of being stuck.</p>
+            <a href="services.html#life" class="service-link">View Details <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="center" style="margin-top: 56px;">
+        <a href="services.html" class="btn btn-outline">Explore All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SAMAAKHYA -->
+  <section class="why-choose-us" style="background-color: var(--bg-black);">
+    <div class="container why-grid">
+      <div class="why-content reveal-left">
+        <span class="eyebrow">The Founder</span>
+        <h2 class="section-title">The person behind the programme</h2>
+        <p class="section-subtitle" style="margin-bottom: 40px;">
+          Samaakhya Gajanayake founded SMKYA after more than a decade of coaching and competing at an international level. Her work draws from athletic training, nutritional science, and psychology because physical results alone rarely create lasting change.
+        </p>
+        <div class="why-stats-grid">
+          <div class="why-stat-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h3>10+ Years</h3>
+            <p>Coaching Experience</p>
+          </div>
+          <div class="why-stat-card">
+            <div class="icon-box">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h3>International</h3>
+            <p>Level Athlete</p>
+          </div>
+          <div class="why-stat-card" style="grid-column: 1 / -1; display: flex; align-items: center; gap: 20px; padding: 24px 32px;">
+            <div class="icon-box" style="margin-bottom: 0;">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div style="text-align: left;">
+              <h3 style="font-size: 1.5rem; margin-bottom: 0;">Level 5</h3>
+              <p>Psychology Qualified</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 40px;">
+          <a href="about.html" class="btn btn-accent">Read her Story</a>
+        </div>
+      </div>
+      <div class="why-image reveal-right" style="transition-delay: 0.2s;">
+        <img src="https://placehold.co/900x500/1c1c1f/00d8ff?text=Samaakhya+training+athlete" alt="Samaakhya training athlete" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--border-light);" width="900" height="500" decoding="async" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE COMPARISON SLIDER (RETAINED FROM CONCEPT) -->
+  <section class="before-after" style="background-color: var(--bg-primary);">
+    <div class="container reveal-fade">
+      <span class="eyebrow" style="justify-content: center;">Real Results</span>
+      <h2 class="section-title" style="margin: 0 auto 20px;">From Effort to Excellence</h2>
+      <p class="section-subtitle" style="margin: 0 auto 56px;">Drag the slider to see the physical transformation results supporting our mental and lifestyle coaching.</p>
+      
+      <!-- Interactive Slider -->
+      <div class="ba-slider-container">
+        <div class="ba-image ba-image-before">
+          <img src="https://placehold.co/1600x1840/1c1c1f/00d8ff?text=Before+Workout" alt="Before Workout" width="1600" height="1840" decoding="async" loading="lazy">
+          <span class="ba-label ba-label-before">Before</span>
+        </div>
+        <div class="ba-image ba-image-after">
+          <img src="https://placehold.co/1000x1840/1c1c1f/00d8ff?text=After+Workout" alt="After Workout" width="1000" height="1840" decoding="async" loading="lazy">
+          <span class="ba-label ba-label-after">After</span>
+        </div>
+        <div class="ba-handle">
+          <div class="ba-handle-button">
+            <i class="fa-solid fa-arrows-left-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT STORIES (PREVIEW) -->
+  <section class="testimonials" style="background-color: var(--bg-black);">
+    <div class="container">
+      <div class="center reveal-fade">
+        <span class="eyebrow" style="justify-content: center;">Client Stories</span>
+        <h2 class="section-title" style="margin: 0 auto 20px;">What Our Clients Say</h2>
+        <p class="section-subtitle" style="margin: 0 auto 56px;">Transformation at SMKYA goes beyond the physical. Here are experiences from real clients.</p>
+      </div>
+    </div>
+    
+    <div class="testimonials-marquee">
+      <div class="testimonials-track">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "It was never just about physical appearance - it was about how movement supports mental strength, confidence, and overall wellbeing. She didn't just train my body - she helped me trust it."
+          </p>
+          <div class="testimonial-profile">
+            <div class="testimonial-avatar">
+              <img src="https://placehold.co/200x200/1c1c1f/00d8ff?text=Denise+H." alt="Denise H." width="200" height="200" decoding="async" loading="lazy">
+            </div>
+            <div class="testimonial-info">
+              <h4>Denise H.</h4>
+              <p>Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "SMKYA offers the most flexible workout plans that fit perfectly into your schedule. It trains you to engage in your workouts in a mindful way. Highly recommend!"
+          </p>
+          <div class="testimonial-profile">
+            <div class="testimonial-avatar">
+              <img src="https://placehold.co/200x200/1c1c1f/00d8ff?text=Narthanie+S." alt="Narthanie S." width="200" height="200" decoding="async" loading="lazy">
+            </div>
+            <div class="testimonial-info">
+              <h4>Narthanie S.</h4>
+              <p>Facebook Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "She tailors everything to your capabilities, goals, lifestyle and fitness level. Not a 'one size fits all' program at all. I am fitter and happier."
+          </p>
+          <div class="testimonial-profile">
+            <div class="testimonial-avatar">
+              <img src="https://placehold.co/200x200/1c1c1f/00d8ff?text=Zainab+O." alt="Zainab O." width="200" height="200" decoding="async" loading="lazy">
+            </div>
+            <div class="testimonial-info">
+              <h4>Zainab O.</h4>
+              <p>Google Review</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Duplicate track for infinite loop -->
+      <div class="testimonials-track">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "It was never just about physical appearance - it was about how movement supports mental strength, confidence, and overall wellbeing. She didn't just train my body - she helped me trust it."
+          </p>
+          <div class="testimonial-profile">
+            <div class="testimonial-avatar">
+              <img src="https://placehold.co/200x200/1c1c1f/00d8ff?text=Denise+H." alt="Denise H." width="200" height="200" decoding="async" loading="lazy">
+            </div>
+            <div class="testimonial-info">
+              <h4>Denise H.</h4>
+              <p>Google Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "SMKYA offers the most flexible workout plans that fit perfectly into your schedule. It trains you to engage in your workouts in a mindful way. Highly recommend!"
+          </p>
+          <div class="testimonial-profile">
+            <div class="testimonial-avatar">
+              <img src="https://placehold.co/200x200/1c1c1f/00d8ff?text=Narthanie+S." alt="Narthanie S." width="200" height="200" decoding="async" loading="lazy">
+            </div>
+            <div class="testimonial-info">
+              <h4>Narthanie S.</h4>
+              <p>Facebook Review</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "She tailors everything to your capabilities, goals, lifestyle and fitness level. Not a 'one size fits all' program at all. I am fitter and happier."
+          </p>
+          <div class="testimonial-profile">
+            <div class="testimonial-avatar">
+              <img src="https://placehold.co/200x200/1c1c1f/00d8ff?text=Zainab+O." alt="Zainab O." width="200" height="200" decoding="async" loading="lazy">
+            </div>
+            <div class="testimonial-info">
+              <h4>Zainab O.</h4>
+              <p>Google Review</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top: 56px;">
+      <a href="testimonials.html" class="btn btn-outline">More Testimonials</a>
+    </div>
+  </section>
+
+  <!-- PROCESS / HOW IT WORKS -->
+  <section class="process" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <div class="reveal-fade">
+        <span class="eyebrow">Our Process</span>
+        <h2 class="section-title" style="margin-bottom: 20px;">Real progress starts with the right understanding.</h2>
+        <p class="section-subtitle" style="margin-bottom: 56px;">Three simple steps from where you are to where you want to be.</p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Card 1 -->
+        <div class="why-stat-card reveal-left" style="text-align: center; padding: 48px 32px;">
+          <div class="icon-box" style="margin: 0 auto 24px; width: 64px; height: 64px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 900; background: rgba(0, 216, 255, 0.1); color: var(--accent);">
+            01
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Consultation</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">We begin by understanding your current lifestyle, goals, challenges and routine.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-stat-card reveal-fade" style="text-align: center; padding: 48px 32px; transition-delay: 0.1s;">
+          <div class="icon-box" style="margin: 0 auto 24px; width: 64px; height: 64px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 900; background: rgba(0, 216, 255, 0.1); color: var(--accent);">
+            02
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Personalised Plan</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Your coaching plan is created in fitness, nutrition, coaching, or a combination of all three.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-stat-card reveal-right" style="text-align: center; padding: 48px 32px; transition-delay: 0.2s;">
+          <div class="icon-box" style="margin: 0 auto 24px; width: 64px; height: 64px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 900; background: rgba(0, 216, 255, 0.1); color: var(--accent);">
+            03
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Support</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">You receive guidance, accountability and practical support as you build new habits.</p>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top: 56px;">
+        <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="cta-banner" style="background: radial-gradient(circle at 10% 50%, rgba(0, 216, 255, 0.1) 0%, transparent 60%), var(--bg-black);">
+    <div class="container reveal-fade">
+      <div class="cta-banner-content">
+        <span class="eyebrow" style="justify-content: center; margin-bottom: 16px;">Get Started</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 16px;">Ready to take the first step?</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          The first step is a conversation. Let’s talk through where you are, what you are working toward, and whether SMKYA is the right fit for you.
+        </p>
+        <div class="cta-banner-buttons">
+          <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>SMKYA<span>.</span></h2>
+          <p>Holistic coaching combining fitness, nutrition, and psychological mindset support for sustainable, lifelong transformation.</p>
+          <div class="footer-socials">
+            <a href="https://facebook.com/smkya.life" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/samaakhya" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@samaakhya" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://linkedin.com/company/smkya" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Essential Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links-list">
+            <li><a href="tel:+94721499479">+94 72 149 9479</a></li>
+            <li><a href="mailto:info@smkya.com">info@smkya.com</a></li>
+            <li><a href="mailto:hello@smkya.com">hello@smkya.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Location</h4>
+          <p class="footer-address">
+            Colombo, Sri Lanka &amp;<br>
+            Online Coaching Worldwide
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 SMKYA. All rights reserved. Created by <a href="https://www.linkedin.com/in/nethaka-galagedera-42aa972aa/" target="_blank"><span>Nate</span></a>.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      autoRaf: true,
+      autoToggle: true,
+      anchors: true,
+      allowNestedScroll: true,
+      naiveDimensions: true,
+      stopInertiaOnNavigate: true
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>

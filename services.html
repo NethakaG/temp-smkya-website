@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - SMKYA</title>
+  <meta name="description" content="Explore SMKYA's four interconnected coaching services: Fitness Coaching, Nutritional Guidance, Mindset Support, and Life Coaching.">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+  <style>
+    .service-detail-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .service-detail-section:nth-child(even) {
+      background-color: var(--bg-black);
+    }
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .service-info-block h3 {
+      font-size: 2.25rem;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .service-info-block .service-description {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    .service-info-block ul {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .service-info-block ul li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+    .service-info-block ul li i {
+      color: var(--accent);
+      margin-top: 5px;
+    }
+    .service-card-meta {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    .service-card-meta h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+    .service-card-meta p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .oshini-profile-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .oshini-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--accent);
+    }
+    .oshini-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    @media (max-width: 1024px) {
+      .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        SMKYA<span>.</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-accent btn-sm" style="padding: 10px 20px;">Start</a>
+        <button class="hamburger" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="hero" style="min-height: 50vh; padding-top: 160px; padding-bottom: 60px;">
+    <div class="container reveal-fade">
+      <span class="eyebrow">Our Services</span>
+      <h1 class="hero-title reveal-fade" style="font-size: clamp(2rem, 5vw, 4rem);">
+        Coaching that sees the<br><span>whole person.</span>
+      </h1>
+      <p class="hero-description" style="max-width: 600px;">
+        Four interconnected services - fitness, nutrition, mindset and life coaching. Most clients work across more than one.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL CONTAINER -->
+  <div id="fitness" class="service-detail-section">
+    <div class="container service-detail-grid">
+      <div class="service-info-block reveal-left">
+        <span class="eyebrow">Service 01</span>
+        <h3>Fitness Coaching</h3>
+        <p class="service-description">
+          Your workout programme is built from scratch around your body, your training history, your schedule, and your goals. The focus is functional strength, sustainable movement, and physical health that holds up beyond the programme.
+        </p>
+        
+        <h4 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; letter-spacing: 0.05em;">What is included:</h4>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Personalised online workout programme</li>
+          <li><i class="fa-solid fa-circle-check"></i> Consult around training history, injuries, lifestyle, goals, and emotional capacity</li>
+          <li><i class="fa-solid fa-circle-check"></i> Progressive adjustments as you build strength and confidence</li>
+          <li><i class="fa-solid fa-circle-check"></i> Voice note and messaging support between sessions</li>
+          <li><i class="fa-solid fa-circle-check"></i> Regular progress reviews</li>
+        </ul>
+      </div>
+      
+      <div class="service-card-meta reveal-right" style="transition-delay: 0.2s;">
+        <h4>Who this is for:</h4>
+        <p>
+          Anyone who wants to build real physical strength and trust in their body, whether you are just starting, returning after a break, or looking to train with more intention.
+        </p>
+        <a href="contact.html" class="btn btn-accent">Start</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="nutrition" class="service-detail-section">
+    <div class="container service-detail-grid">
+      <div class="service-info-block reveal-left">
+        <span class="eyebrow">Service 02</span>
+        <h3>Nutritional Guidance</h3>
+        <p class="service-description">
+          This is practical and sustainable nutrition support for people who want to eat with more structure and confidence, without cutting out the foods that are part of their life and culture, and without the cycle of restriction and guilt. Your guidance is built around your lifestyle, your preferences, your stress levels, and your long-term energy.
+        </p>
+        
+        <h4 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; letter-spacing: 0.05em;">What is included:</h4>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Nutrition guidance tailored to your lifestyle, routine, and preferences</li>
+          <li><i class="fa-solid fa-circle-check"></i> Flexible approach that accounts for cultural food norms, social eating, and busy schedules</li>
+          <li><i class="fa-solid fa-circle-check"></i> Education on what your body needs and why</li>
+          <li><i class="fa-solid fa-circle-check"></i> Focus on sustainable habits, not short-term results</li>
+        </ul>
+
+        <!-- Oshini Medical Nutrition Support -->
+        <div class="oshini-profile-card">
+          <div class="oshini-avatar">
+            <!-- Using dietitian style headshot placeholder -->
+            <img src="https://placehold.co/200x500/1c1c1f/00d8ff?text=Oshini+Medical+Nutrition+Support" alt="Oshini Medical Nutrition Support" width="200" height="500" decoding="async" loading="lazy">
+          </div>
+          <div>
+            <h4 style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--accent); margin-bottom: 4px;">Oshini</h4>
+            <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">Medical Nutrition Support | Clinical Nutritionist</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0;">
+              For clients who need more medically informed nutrition support, SMKYA may involve Oshini, whose expertise allows for a deeper understanding of nutrition in relation to medical needs, absorption, and health related factors.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card-meta reveal-right" style="transition-delay: 0.2s;">
+        <h4>Who this is for:</h4>
+        <p>
+          Anyone who feels stuck in cycles of restrictive eating, or who simply wants to eat in a way that actually matches how they want to feel and function.
+        </p>
+        <a href="contact.html" class="btn btn-accent">Start</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="mindset" class="service-detail-section">
+    <div class="container service-detail-grid">
+      <div class="service-info-block reveal-left">
+        <span class="eyebrow">Service 03</span>
+        <h3>Mindset Support</h3>
+        <p class="service-description">
+          Most programmes tell you what to do. Mindset support helps you understand why you do what you do and how to change it. This is not motivational coaching or generic goal-setting. It is guided work to understand what is driving your habits, where your discipline breaks down, and how to rebuild your relationship with your goals in a way that actually holds.
+        </p>
+        
+        <h4 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; letter-spacing: 0.05em;">What is included:</h4>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> One-on-one sessions focused on motivation, identity, and habit</li>
+          <li><i class="fa-solid fa-circle-check"></i> Exploration of what is behind patterns of self-sabotage, inconsistency, or avoidance</li>
+          <li><i class="fa-solid fa-circle-check"></i> Tools and frameworks to build self-discipline that does not rely on willpower alone</li>
+          <li><i class="fa-solid fa-circle-check"></i> Reconnecting with goals that are genuinely yours and not ones you inherited from external pressure</li>
+          <li><i class="fa-solid fa-circle-check"></i> Voice notes and messaging support between sessions</li>
+        </ul>
+      </div>
+      
+      <div class="service-card-meta reveal-right" style="transition-delay: 0.2s;">
+        <h4>Who this is for:</h4>
+        <p>
+          Anyone who knows what they want but keeps getting in their own way. Anyone who starts strong and falls off. Anyone who feels disconnected from the goals they are supposed to be chasing.
+        </p>
+        <a href="contact.html" class="btn btn-accent">Start</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="life" class="service-detail-section">
+    <div class="container service-detail-grid">
+      <div class="service-info-block reveal-left">
+        <span class="eyebrow">Service 04</span>
+        <h3>Life Coaching</h3>
+        <p class="service-description">
+          Life coaching at SMKYA is for people who are not necessarily struggling with exercise or food, but who feel stuck, burnt out, or unclear on what they actually want. Or for people who have the goals but cannot seem to build the habits that move them toward them. It is structured, goal-focused coaching that helps you understand what you are working toward, what has been getting in the way, and how to build forward momentum.
+        </p>
+        
+        <h4 style="font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; letter-spacing: 0.05em;">What is included:</h4>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> One-on-one online sessions</li>
+          <li><i class="fa-solid fa-circle-check"></i> Mindset and vision work: getting clear on your goals and what is actually driving them</li>
+          <li><i class="fa-solid fa-circle-check"></i> Personalised growth and accountability plan</li>
+          <li><i class="fa-solid fa-circle-check"></i> Voice note and SMS support between sessions</li>
+          <li><i class="fa-solid fa-circle-check"></i> Regular progress reviews</li>
+        </ul>
+      </div>
+      
+      <div class="service-card-meta reveal-right" style="transition-delay: 0.2s;">
+        <h4>Who this is for:</h4>
+        <p>
+          Anyone navigating stress, low confidence, burnout, loneliness, a life transition, or a persistent gap between where they are and where they thought they would be by now.
+        </p>
+        <a href="contact.html" class="btn btn-accent">Start</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS / HOW IT WORKS -->
+  <section class="process" style="background-color: var(--bg-black);">
+    <div class="container">
+      <div class="center reveal-fade">
+        <span class="eyebrow" style="justify-content: center;">Methodology</span>
+        <h2 class="section-title" style="margin: 0 auto 20px;">How it works</h2>
+        <p class="section-subtitle" style="margin: 0 auto 56px;">A clear, supportive path forward.</p>
+      </div>
+
+      <div class="why-stats-grid" >
+        <!-- Card 1 -->
+        <div class="why-stat-card reveal-left" style="text-align: center; padding: 48px 32px;">
+          <div class="icon-box" style="margin: 0 auto 24px; width: 64px; height: 64px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 900; background: rgba(0, 216, 255, 0.1); color: var(--accent);">
+            1
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Consultation</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">We talk. You share where you are and what you are working toward. Just a conversation to find out whether SMKYA is the right fit.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-stat-card reveal-fade" style="text-align: center; padding: 48px 32px; transition-delay: 0.1s;">
+          <div class="icon-box" style="margin: 0 auto 24px; width: 64px; height: 64px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 900; background: rgba(0, 216, 255, 0.1); color: var(--accent);">
+            2
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Your Personalised Plan</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Based on that conversation, a programme is built around you - fitness, nutrition, coaching, or a combination of all three.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-stat-card reveal-right" style="text-align: center; padding: 48px 32px; transition-delay: 0.2s;">
+          <div class="icon-box" style="margin: 0 auto 24px; width: 64px; height: 64px; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 900; background: rgba(0, 216, 255, 0.1); color: var(--accent);">
+            3
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Ongoing Support</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">You begin with regular check-ins, messaging support, and programme adjustments built into the process, so you are never working through it alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" style="background: radial-gradient(circle at 10% 50%, rgba(0, 216, 255, 0.1) 0%, transparent 60%), var(--bg-primary);">
+    <div class="container reveal-fade">
+      <div class="cta-banner-content">
+        <span class="eyebrow" style="justify-content: center; margin-bottom: 16px;">Get Started</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 16px;">Ready to take the first step?</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          The first step is a conversation. Let’s talk through where you are, what you are working toward, and whether SMKYA is the right fit for you.
+        </p>
+        <div class="cta-banner-buttons">
+          <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>SMKYA<span>.</span></h2>
+          <p>Holistic coaching combining fitness, nutrition, and psychological mindset support for sustainable, lifelong transformation.</p>
+          <div class="footer-socials">
+            <a href="https://facebook.com/smkya.life" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/samaakhya" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@samaakhya" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://linkedin.com/company/smkya" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Essential Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links-list">
+            <li><a href="tel:+94721499479">+94 72 149 9479</a></li>
+            <li><a href="mailto:info@smkya.com">info@smkya.com</a></li>
+            <li><a href="mailto:hello@smkya.com">hello@smkya.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Location</h4>
+          <p class="footer-address">
+            Colombo, Sri Lanka &amp;<br>
+            Online Coaching Worldwide
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 SMKYA. All rights reserved. Created by <a href="https://www.linkedin.com/in/nethaka-galagedera-42aa972aa/" target="_blank"><span>Nate</span></a>.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      autoRaf: true,
+      autoToggle: true,
+      anchors: true,
+      allowNestedScroll: true,
+      naiveDimensions: true,
+      stopInertiaOnNavigate: true
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
