@@ -970,6 +970,73 @@ section {
   color: var(--text-muted);
 }
 
+/* Testimonials Masonry Layout */
+.testimonials-grid-section .container {
+  max-width: 1470px;
+}
+
+.testimonials-masonry {
+  column-count: 3;
+  column-gap: 32px;
+  width: 100%;
+}
+
+.testimonials-masonry .testimonial-card {
+  width: 100% !important;
+  display: inline-block;
+  margin-bottom: 32px;
+  break-inside: avoid;
+}
+
+@media (max-width: 992px) {
+  .testimonials-masonry {
+    column-count: 2;
+    column-gap: 24px;
+  }
+  .testimonials-masonry .testimonial-card {
+    margin-bottom: 24px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-masonry {
+    column-count: 1;
+    column-gap: 0;
+  }
+  .testimonials-masonry .testimonial-card {
+    margin-bottom: 16px;
+    padding: 24px;
+  }
+}
+
+/* Custom spawn animations for all cards */
+.reveal-masonry {
+  opacity: 0;
+  transition: transform 2.0s cubic-bezier(0.16, 1, 0.3, 1), opacity 2.0s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Starting animation states from different directions */
+.reveal-masonry.from-top {
+  transform: translateY(-80px);
+}
+.reveal-masonry.from-bottom {
+  transform: translateY(80px);
+}
+.reveal-masonry.from-left {
+  transform: translateX(-80px);
+}
+.reveal-masonry.from-right {
+  transform: translateX(80px);
+}
+
+/* Active animated state when revealed */
+.reveal-masonry.reveal-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* Trainers Section */
 .trainers {
   background-color: var(--bg-black);
@@ -1442,8 +1509,8 @@ select.form-control {
 /* Scroll reveal utility */
 .reveal, .reveal-left, .reveal-right, .reveal-fade, .reveal-card-up, .reveal-card-down {
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal {

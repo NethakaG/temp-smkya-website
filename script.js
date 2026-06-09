@@ -58,6 +58,46 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(element);
   });
 
+  // ===== GLOBAL CARDS SPAWN REVEAL =====
+  const animateCards = Array.from(document.querySelectorAll('.testimonial-card, .service-card, .pricing-card, .blog-card, .why-stat-card, .process-card, .trainer-card, .trainer-profile'))
+    .filter(card => !card.closest('.testimonials-masonry'));
+  if (animateCards.length > 0) {
+    const directions = ['from-top', 'from-bottom', 'from-left', 'from-right'];
+    
+    // Assign random starting directions and strip default reveal animations to avoid conflicts
+    animateCards.forEach(card => {
+      card.classList.remove('reveal', 'reveal-left', 'reveal-right', 'reveal-fade', 'reveal-card-up', 'reveal-card-down');
+      const randomDir = directions[Math.floor(Math.random() * directions.length)];
+      card.classList.add('reveal-masonry', randomDir);
+    });
+
+    // IntersectionObserver to stagger entry animation per viewport batch
+    const cardsObserver = new IntersectionObserver((entries) => {
+      // Filter visible items and sort them by top bounding rect so they animate in sequence (top-to-bottom)
+      const visibleEntries = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => {
+          const rectA = a.target.getBoundingClientRect();
+          const rectB = b.target.getBoundingClientRect();
+          return rectA.top - rectB.top;
+        });
+
+      visibleEntries.forEach((entry, idx) => {
+        // Set dynamic stagger delay (0.1s step) for elements intersecting simultaneously
+        entry.target.style.transitionDelay = `${idx * 0.1}s`;
+        entry.target.classList.add('reveal-in');
+        cardsObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    animateCards.forEach(card => {
+      cardsObserver.observe(card);
+    });
+  }
+
   // ===== BEFORE / AFTER COMPARISON SLIDER =====
   const sliderContainer = document.querySelector('.ba-slider-container');
   const handle = document.querySelector('.ba-handle');
