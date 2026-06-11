@@ -6,13 +6,13 @@
   --bg-black: #0a0a0b;
   --accent: #9BF2EA;
   --accent-rgb: 155, 242, 234;
-  --accent-hover: #85ded6;
+  --accent-hover: #7bebe0;
   --text-primary: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.65);
   --text-dark: #0a0a0b;
   
-  --accent-secondary: #2c736a;
-  --accent-secondary-rgb: 44, 115, 106;
+  --accent-secondary: #005b6e;
+  --accent-secondary-rgb: 0, 91, 110;
   
   --font-heading: 'Unbounded', sans-serif;
   --font-body: 'DM Sans', sans-serif;
