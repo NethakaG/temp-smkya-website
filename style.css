@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;500;600;700;900&family=Fragment+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Unbounded:wght@400;500;600;700;900&family=Fragment+Mono&display=swap');
 
 :root {
   --bg-primary: #121214;
@@ -15,7 +15,7 @@
   --accent-secondary-rgb: 0, 91, 110;
   
   --font-heading: 'Unbounded', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
   --font-mono: 'Fragment Mono', monospace;
   
   --border-color: #1c1c1f;
