@@ -41,24 +41,22 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content reveal-left">
+  <section class="hero" style="background: radial-gradient(circle at 50% 50%, rgba(0, 216, 255, 0.05) 0%, transparent 80%), url('assets/hero-section/hero-background.png') center/cover no-repeat; position: relative;">
+    <!-- Dark readability overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(10, 10, 11, 0.75); z-index: 1;"></div>
+    <div class="container hero-grid" style="position: relative; z-index: 2;">
+      <div class="hero-content reveal-left" style="max-width: 800px; grid-column: 1 / span 2;">
         <h1 class="hero-title">
           Build your body, mind & life
           <span>sustainably.</span>
         </h1>
-        <p class="hero-description">
+        <p class="hero-description" style="max-width: 600px;">
           SMKYA is a holistic coaching practice built around fitness, nutrition, and mindset. A programme designed around who you are and where you genuinely want to go.
         </p>
         <div class="hero-buttons">
           <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
           <a href="services.html" class="btn btn-outline">Explore Services</a>
         </div>
-      </div>
-      <div class="hero-image-wrapper reveal-right" style="transition-delay: 0.2s;">
-        <!-- Using a high quality fitness portrait placeholder -->
-        <img src="https://placehold.co/1600x500/1c1c1f/00d8ff?text=Image" alt="Fitness Training Coaching" width="1600" height="500" decoding="async">
       </div>
     </div>
   </section>
