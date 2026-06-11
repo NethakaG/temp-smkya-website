@@ -229,28 +229,150 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // ===== BOOKING FORM SUBMISSION =====
-  const bookingForm = document.querySelector('.booking-form form');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const submitBtn = bookingForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      
-      submitBtn.textContent = 'BOOKING SPOT...';
-      submitBtn.disabled = true;
+  // ===== REGISTRATION MODAL INJECTION & LOGIC =====
+  
+  // 1. Inject modal if not on contact.html
+  const isContactPage = window.location.pathname.endsWith('contact.html');
+  
+  if (!isContactPage) {
+    const modalHTML = `
+      <div id="registration-modal">
+        <div class="modal-box booking-form">
+          <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+          <h2 style="font-family: var(--font-heading); font-size: 1.35rem; margin-bottom: 32px; text-transform: uppercase;">Register Now</h2>
+          
+          <form action="#">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="modal-first-name">First Name *</label>
+                <input type="text" id="modal-first-name" class="form-control" required placeholder="John">
+              </div>
+              <div class="form-group">
+                <label for="modal-last-name">Last Name *</label>
+                <input type="text" id="modal-last-name" class="form-control" required placeholder="Doe">
+              </div>
+            </div>
+            
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="modal-email">Email Address *</label>
+                <input type="email" id="modal-email" class="form-control" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="modal-phone">Phone Number *</label>
+                <input type="tel" id="modal-phone" class="form-control" required placeholder="+94 72 149 9479">
+              </div>
+            </div>
 
-      // Simulate API call
-      setTimeout(() => {
-        // Show success alert/toast
-        showNotification('Success! Your spot has been booked. We will contact you shortly.');
-        bookingForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 1500);
+            <div class="form-group">
+              <label for="modal-plan-select">What are you looking for? *</label>
+              <select id="modal-plan-select" class="form-control" required>
+                <option value="" disabled selected>Select service focus</option>
+                <option value="fitness">Fitness Coaching</option>
+                <option value="nutrition">Nutritional Guidance</option>
+                <option value="mindset">Mindset Support</option>
+                <option value="life">Life Coaching</option>
+                <option value="holistic">Combined Holistic Programme</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="modal-message">Tell us about your goals, routine &amp; lifestyle *</label>
+              <textarea id="modal-message" class="form-control" rows="5" required placeholder="Let us know what goals you are chasing and where you currently feel stuck..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-accent">Submit Message</button>
+          </form>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+  
+  const modal = document.getElementById('registration-modal');
+  
+  function openRegistrationModal() {
+    if (modal) {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  
+  function closeRegistrationModal() {
+    if (modal) {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Set up event listeners for modal controls
+  if (modal) {
+    const closeBtn = modal.querySelector('.modal-close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeRegistrationModal);
+    }
+    
+    // Close modal when clicking outside modal box
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeRegistrationModal();
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeRegistrationModal();
+      }
     });
   }
+
+  // Intercept all "Start" CTA buttons
+  const startButtons = Array.from(document.querySelectorAll('a')).filter(a => a.textContent.trim().toUpperCase() === 'START');
+  
+  startButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (isContactPage) {
+        // Smoothly scroll to inline form on the contact page
+        const formTarget = document.getElementById('form-target');
+        if (formTarget) {
+          formTarget.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        openRegistrationModal();
+      }
+    });
+  });
+
+  // ===== BOOKING FORM SUBMISSION (EVENT DELEGATION) =====
+  document.addEventListener('submit', (e) => {
+    const form = e.target.closest('.booking-form form');
+    if (!form) return;
+    
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = 'BOOKING SPOT...';
+    submitBtn.disabled = true;
+
+    // Simulate API call
+    setTimeout(() => {
+      // Show success alert/toast
+      showNotification('Success! Your spot has been booked. We will contact you shortly.');
+      form.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+      
+      // Close modal if form is inside registration modal
+      if (modal && modal.classList.contains('open') && modal.contains(form)) {
+        setTimeout(() => {
+          closeRegistrationModal();
+        }, 500);
+      }
+    }, 1500);
+  });
 
   // Helper notification toast
   function showNotification(message) {
