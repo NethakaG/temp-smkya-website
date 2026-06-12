@@ -98,82 +98,162 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== TESTIMONIALS DRAG & AUTO-SCROLL =====
-  const marquee = document.querySelector('.testimonials-marquee');
-  if (marquee) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let autoScrollTimer;
+  // ===== TESTIMONIALS BOUNCE CARDS =====
+  const bounceCardsContainer = document.getElementById('bounce-cards');
+  if (bounceCardsContainer) {
+    const cards = bounceCardsContainer.querySelectorAll('.bounce-card');
+    const transformStyles = [
+      "rotate(-9deg) translate(-240px)",
+      "rotate(-3deg) translate(-80px)",
+      "rotate(3deg) translate(80px)",
+      "rotate(9deg) translate(240px)"
+    ];
 
-    // Loop scroll event to create seamless infinite scrolling
-    marquee.addEventListener('scroll', () => {
-      const halfWidth = marquee.scrollWidth / 2;
-      if (marquee.scrollLeft >= halfWidth) {
-        marquee.scrollLeft = 1;
-      } else if (marquee.scrollLeft <= 0) {
-        marquee.scrollLeft = halfWidth - 1;
+    const isMobile = () => window.innerWidth <= 768;
+
+    // Helper functions to calculate pushed / flattened transforms
+    function getNoRotationTransform(transformStr) {
+      const hasRotate = /rotate\([\s\S]*?\)/.test(transformStr);
+      if (hasRotate) {
+        return transformStr.replace(/rotate\([\s\S]*?\)/, 'rotate(0deg)');
+      } else if (transformStr === 'none') {
+        return 'rotate(0deg)';
+      } else {
+        return `${transformStr} rotate(0deg)`;
+      }
+    }
+
+    function getPushedTransform(baseTransform, offsetX) {
+      const translateRegex = /translate\(([-0-9.]+)px\)/;
+      const match = baseTransform.match(translateRegex);
+      if (match) {
+        const currentX = parseFloat(match[1]);
+        const newX = currentX + offsetX;
+        return baseTransform.replace(translateRegex, `translate(${newX}px)`);
+      } else {
+        return baseTransform === 'none' ? `translate(${offsetX}px)` : `${baseTransform} translate(${offsetX}px)`;
+      }
+    }
+
+    // Set initial configuration
+    cards.forEach((card, idx) => {
+      if (!isMobile()) {
+        card.style.transform = transformStyles[idx];
+      }
+      card.style.zIndex = idx;
+    });
+
+    // Set scale to 0 initially to prevent flash/jump before animation starts
+    gsap.set(cards, { scale: 0 });
+
+    // Staggered elastic entrance on scroll reveal
+    const bounceCardsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (isMobile()) {
+            gsap.fromTo(cards, 
+              { scale: 0 }, 
+              { 
+                scale: 1, 
+                stagger: 0.1, 
+                ease: 'back.out(1.5)', 
+                duration: 0.6 
+              }
+            );
+          } else {
+            gsap.fromTo(cards, 
+              { scale: 0 }, 
+              { 
+                scale: 1, 
+                stagger: 0.3,
+                ease: 'elastic.out(1, 0.5)', 
+                delay: 0.1,
+                duration: 1.2
+              }
+            );
+          }
+          bounceCardsObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    bounceCardsObserver.observe(bounceCardsContainer);
+
+    // Hover interactions
+    function pushSiblings(hoveredIdx) {
+      if (isMobile()) return;
+      
+      cards.forEach((card, i) => {
+        gsap.killTweensOf(card);
+        const baseTransform = transformStyles[i] || 'none';
+
+        if (i === hoveredIdx) {
+          const noRotation = getNoRotationTransform(baseTransform);
+          gsap.to(card, {
+            transform: noRotation,
+            zIndex: 10,
+            duration: 0.4,
+            ease: 'back.out(1.4)',
+            overwrite: 'auto'
+          });
+        } else {
+          const offsetX = i < hoveredIdx ? -160 : 160;
+          const pushedTransform = getPushedTransform(baseTransform, offsetX);
+
+          const distance = Math.abs(hoveredIdx - i);
+          const delay = distance * 0.05;
+
+          gsap.to(card, {
+            transform: pushedTransform,
+            zIndex: i,
+            duration: 0.4,
+            ease: 'back.out(1.4)',
+            delay: delay,
+            overwrite: 'auto'
+          });
+        }
+      });
+    }
+
+    function resetSiblings() {
+      if (isMobile()) return;
+
+      cards.forEach((card, i) => {
+        gsap.killTweensOf(card);
+        const baseTransform = transformStyles[i] || 'none';
+        gsap.to(card, {
+          transform: baseTransform,
+          zIndex: i,
+          duration: 0.4,
+          ease: 'back.out(1.4)',
+          overwrite: 'auto'
+        });
+      });
+    }
+
+    cards.forEach((card, idx) => {
+      card.addEventListener('mouseenter', () => pushSiblings(idx));
+      card.addEventListener('mouseleave', resetSiblings);
+    });
+
+    // Handle window resize to reset transforms on mobile transition
+    window.addEventListener('resize', () => {
+      if (isMobile()) {
+        cards.forEach((card) => {
+          gsap.killTweensOf(card);
+          card.style.transform = '';
+          card.style.zIndex = '';
+        });
+      } else {
+        cards.forEach((card, idx) => {
+          card.style.transform = transformStyles[idx];
+          card.style.zIndex = idx;
+        });
       }
     });
-
-    // Drag scroll handlers for mouse cursor
-    marquee.addEventListener('mousedown', (e) => {
-      isDown = true;
-      marquee.style.cursor = 'grabbing';
-      startX = e.pageX - marquee.offsetLeft;
-      scrollLeft = marquee.scrollLeft;
-      stopAutoScroll();
-    });
-
-    marquee.addEventListener('mouseleave', () => {
-      isDown = false;
-      marquee.style.cursor = 'grab';
-      startAutoScroll();
-    });
-
-    marquee.addEventListener('mouseup', () => {
-      isDown = false;
-      marquee.style.cursor = 'grab';
-      startAutoScroll();
-    });
-
-    marquee.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - marquee.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      marquee.scrollLeft = scrollLeft - walk;
-    });
-
-    // Touch events for mobile swiping (pauses auto-scroll)
-    marquee.addEventListener('touchstart', () => {
-      stopAutoScroll();
-    }, { passive: true });
-
-    marquee.addEventListener('touchend', () => {
-      startAutoScroll();
-    }, { passive: true });
-
-    // Auto-scroll loop
-    function startAutoScroll() {
-      if (autoScrollTimer) return;
-      autoScrollTimer = setInterval(() => {
-        if (!isDown) {
-          marquee.scrollLeft += 1;
-        }
-      }, 30);
-    }
-
-    function stopAutoScroll() {
-      clearInterval(autoScrollTimer);
-      autoScrollTimer = null;
-    }
-
-    // Initialize auto scroll
-    startAutoScroll();
   }
-
-
 
   // ===== REGISTRATION MODAL INJECTION & LOGIC =====
   
