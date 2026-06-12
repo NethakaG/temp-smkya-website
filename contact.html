@@ -20,7 +20,7 @@
   <header class="nav-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        SMKYA<span>.</span>
+        <img src="assets/logo/logo-white-transparent.png" alt="SMKYA" class="brand-logo-img">
       </a>
       <ul class="nav-menu">
         <li><a href="about.html" class="nav-link">About</a></li>
@@ -57,9 +57,6 @@
     <div class="container contact-grid">
       <div class="contact-info reveal-left">
         <h2 class="section-title" style="font-size: clamp(1.5rem, 2.5vw, 2.2rem);">How To Reach Us</h2>
-        <p class="section-subtitle" style="margin-bottom: 40px;">
-          Prefer to book directly? <a href="#form-target" style="color: var(--accent); text-decoration: underline; text-underline-offset: 4px; font-family: var(--font-heading); font-size: 0.85rem;">Jump straight to the registration form &rarr;</a>
-        </p>
         
         <div class="contact-info-cards">
           <!-- WhatsApp -->
@@ -79,7 +76,6 @@
             </div>
             <div>
               <h4>Email Support</h4>
-              <p style="font-size: 1.1rem; margin-bottom: 6px;"><a href="mailto:info@smkya.com">info@smkya.com</a></p>
               <p style="font-size: 1.1rem;"><a href="mailto:hello@smkya.com">hello@smkya.com</a></p>
             </div>
           </div>
@@ -108,41 +104,114 @@
         <form action="#">
           <div class="form-group-row">
             <div class="form-group">
-              <label for="first-name">First Name *</label>
-              <input type="text" id="first-name" class="form-control" required placeholder="John">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="hello@example.com">
             </div>
             <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first-name" class="form-control" required placeholder="First name">
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
               <label for="last-name">Last Name *</label>
-              <input type="text" id="last-name" class="form-control" required placeholder="Doe">
+              <input type="text" id="last-name" name="last-name" class="form-control" required placeholder="Last name">
+            </div>
+            <div class="form-group">
+              <label for="mobile-number">Mobile Number (including country code) *</label>
+              <input type="tel" id="mobile-number" name="mobile-number" class="form-control" required placeholder="+94 72 149 9479">
             </div>
           </div>
           
           <div class="form-group-row">
             <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" class="form-control" required placeholder="john@example.com">
+              <label for="date-of-birth">Date of Birth *</label>
+              <input type="date" id="date-of-birth" name="date-of-birth" class="form-control" required>
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" class="form-control" required placeholder="+94 72 149 9479">
+              <label for="gender">Gender *</label>
+              <select id="gender" name="gender" class="form-control" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="intersex">Intersex</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="occupation">Occupation</label>
+              <input type="text" id="occupation" name="occupation" class="form-control" placeholder="Your occupation">
+            </div>
+            <div class="form-group">
+              <label for="weight">Weight *</label>
+              <input type="text" id="weight" name="weight" class="form-control" required placeholder="e.g. 68kg">
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="country">Country of Residence *</label>
+              <input type="text" id="country" name="country" class="form-control" required placeholder="Country">
+            </div>
+            <div class="form-group">
+              <label for="address">Residential Address</label>
+              <input type="text" id="address" name="address" class="form-control" placeholder="Residential address">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="plan-select">What are you looking for? *</label>
-            <select id="plan-select" class="form-control" required>
-              <option value="" disabled selected>Select service focus</option>
-              <option value="fitness">Fitness Coaching</option>
-              <option value="nutrition">Nutritional Guidance</option>
-              <option value="mindset">Mindset Support</option>
-              <option value="life">Life Coaching</option>
-              <option value="holistic">Combined Holistic Programme</option>
+            <label for="health-conditions">Health Conditions *</label>
+            <textarea id="health-conditions" name="health-conditions" class="form-control" rows="4" required placeholder="Asthma, PCOS, gastritis, ankle injury, depression, anxiety, etc."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="wellness-goals">Top 3 Wellness Goals *</label>
+            <textarea id="wellness-goals" name="wellness-goals" class="form-control" rows="4" required placeholder="Sports-specific training, building self-confidence, weight loss, improving flexibility, building healthy habits, injury prevention/recovery"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="ranked-goals">Rank Your Fitness / Life Goals *</label>
+            <textarea id="ranked-goals" name="ranked-goals" class="form-control" rows="4" required placeholder="No.1 Build self-confidence, No.2 lose weight, No.3 improve flexibility"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="program-select">Select the Program *</label>
+            <select id="program-select" name="program" class="form-control" required>
+              <option value="" disabled selected>Select program</option>
+              <option value="life-coaching">Life Coaching with Samaakhya</option>
+              <option value="exercise-plan">SMKYA Individual / Couples Exercise Plan</option>
+              <option value="nutrition">SMKYA Nutrition Consultation and Guidance</option>
+              <option value="combination">A Combination of Packages</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="message">Tell us about your goals, routine &amp; lifestyle *</label>
-            <textarea id="message" class="form-control" rows="5" required placeholder="Let us know what goals you are chasing and where you currently feel stuck..."></textarea>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="preferred-chat-date">Preferred Chat Date *</label>
+              <input type="date" id="preferred-chat-date" name="preferred-chat-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="preferred-chat-time">Preferred Chat Time *</label>
+              <select id="preferred-chat-time" name="preferred-chat-time" class="form-control" required>
+                <option value="" disabled selected>Select time</option>
+                <option value="08:00">8:00 AM</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+              </select>
+            </div>
           </div>
 
           <button type="submit" class="btn btn-accent">Submit Message</button>
@@ -156,8 +225,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <h2>SMKYA<span>.</span></h2>
-          <p>Holistic coaching combining fitness, nutrition, and psychological mindset support for sustainable, lifelong transformation.</p>
+          <img src="assets/logo/logo-white-transparent.png" alt="SMKYA" class="footer-logo-img">
+          <p>Holistic coaching combining fitness, nutrition, and mindset support for a sustainable transformation.</p>
           <div class="footer-socials">
             <a href="https://facebook.com/smkya.life" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://instagram.com/samaakhya" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
@@ -181,7 +250,6 @@
           <h4>Contact Us</h4>
           <ul class="footer-links-list">
             <li><a href="tel:+94721499479">+94 72 149 9479</a></li>
-            <li><a href="mailto:info@smkya.com">info@smkya.com</a></li>
             <li><a href="mailto:hello@smkya.com">hello@smkya.com</a></li>
           </ul>
         </div>

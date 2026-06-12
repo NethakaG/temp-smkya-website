@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMKYA | Build your body, mind & life sustainably.</title>
-  <meta name="description" content="SMKYA is a holistic online coaching practice built around fitness, nutrition, and mindset run by Samaakhya Gajanaayke. A programme designed around who you are.">
+  <meta name="description" content="SMKYA is a holistic online coaching practice built around fitness, nutrition, and mindset run by Samaakhya Gajanayake. A programme designed around who you are.">
   
   <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,7 +20,7 @@
   <header class="nav-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        SMKYA<span>.</span>
+        <img src="assets/logo/logo-white-transparent.png" alt="SMKYA" class="brand-logo-img">
       </a>
       <ul class="nav-menu">
         <li><a href="about.html" class="nav-link">About</a></li>
@@ -45,10 +45,10 @@
     <!-- Dark readability overlay -->
     <div style="position: absolute; inset: 0; background: rgba(10, 10, 11, 0.75); z-index: 1;"></div>
     <div class="container hero-grid" style="position: relative; z-index: 2;">
-      <div class="hero-content reveal-left" style="max-width: 800px; grid-column: 1 / span 2;">
+      <div class="hero-content reveal-left" style="max-width: 980px;">
         <h1 class="hero-title">
-          Build your body, mind & life
-          <span>sustainably.</span>
+          <span class="hero-title-line">Build your body, mind, & life</span>
+          <span>sustainable</span>
         </h1>
         <p class="hero-description" style="max-width: 600px;">
           SMKYA is a holistic coaching practice built around fitness, nutrition, and mindset. A programme designed around who you are and where you genuinely want to go.
@@ -65,17 +65,8 @@
 
   <!-- WHY SMKYA IS DIFFERENT -->
   <section class="about" id="why-smkya" style="background-color: var(--bg-black);">
-    <div class="container about-grid">
-      <div class="about-images reveal-left">
-        <div class="about-img-main">
-          <img src="https://placehold.co/900x500/1c1c1f/9bf2ea?text=Image" alt="Samaakhya coaching session" width="900" height="500" decoding="async" loading="lazy">
-        </div>
-        <div class="about-stat-box" style="grid-column: 1 / span 2; padding: 24px;">
-          <h3>3 PILLARS</h3>
-          <p>Movement · Nourishment · Mindset</p>
-        </div>
-      </div>
-      <div class="about-content reveal-right" style="transition-delay: 0.2s;">
+    <div class="container about-text-only">
+      <div class="about-content reveal-fade">
         <h2>You do not need another plan you cannot stick to.</h2>
         <p class="about-text">
           Most people do not struggle because they lack another plan. They struggle because the plan does not fit their body, lifestyle, stress, mindset or the season of life they are in.
@@ -186,33 +177,8 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE COMPARISON SLIDER (RETAINED FROM CONCEPT) -->
-  <section class="before-after" style="background-color: var(--bg-primary);">
-    <div class="container reveal-fade">
-      <h2 class="section-title" style="margin: 0 auto 20px;">From Effort to Excellence</h2>
-      <p class="section-subtitle" style="margin: 0 auto 56px;">Drag the slider to see the physical transformation results supporting our mental and lifestyle coaching.</p>
-      
-      <!-- Interactive Slider -->
-      <div class="ba-slider-container">
-        <div class="ba-image ba-image-before">
-          <img src="https://placehold.co/1600x1840/1c1c1f/9bf2ea?text=Image" alt="Before Workout" width="1600" height="1840" decoding="async" loading="lazy">
-          <span class="ba-label ba-label-before">Before</span>
-        </div>
-        <div class="ba-image ba-image-after">
-          <img src="https://placehold.co/1000x1840/1c1c1f/9bf2ea?text=Image" alt="After Workout" width="1000" height="1840" decoding="async" loading="lazy">
-          <span class="ba-label ba-label-after">After</span>
-        </div>
-        <div class="ba-handle">
-          <div class="ba-handle-button">
-            <i class="fa-solid fa-arrows-left-right"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CLIENT STORIES (PREVIEW) -->
-  <section class="testimonials" style="background-color: var(--bg-black);">
+  <section class="testimonials" style="background-color: var(--bg-primary);">
     <div class="container">
       <div class="center reveal-fade">
         <h2 class="section-title" style="margin: 0 auto 20px;">What Our Clients Say</h2>
@@ -347,11 +313,11 @@
   </section>
 
   <!-- PROCESS / HOW IT WORKS -->
-  <section class="process" style="background-color: var(--bg-primary);">
+  <section class="process" style="background-color: var(--bg-black);">
     <div class="container">
-      <div class="reveal-fade">
-        <h2 class="section-title" style="margin-bottom: 20px;">Real progress starts with the right understanding.</h2>
-        <p class="section-subtitle" style="margin-bottom: 56px;">Three simple steps from where you are to where you want to be.</p>
+      <div class="center reveal-fade">
+        <h2 class="section-title" style="margin: 0 auto 20px;">Real progress starts with the right understanding.</h2>
+        <p class="section-subtitle" style="margin: 0 auto 56px;">Three simple steps from where you are to where you want to be.</p>
       </div>
 
       <div class="process-grid">
@@ -383,19 +349,16 @@
         </div>
       </div>
 
-      <div class="center" style="margin-top: 56px;">
-        <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
-      </div>
     </div>
   </section>
 
   <!-- FOOTER CTA -->
-  <section class="cta-banner" style="background: radial-gradient(circle at 10% 50%, rgba(155, 242, 234, 0.1) 0%, transparent 60%), var(--bg-black);">
+  <section class="cta-banner" style="background: radial-gradient(circle at 10% 50%, rgba(155, 242, 234, 0.1) 0%, transparent 60%), var(--bg-primary);">
     <div class="container reveal-fade">
       <div class="cta-banner-content">
         <h2 style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 900; margin-bottom: 16px;">Ready to take the first step?</h2>
         <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
-          The first step is a conversation. Let’s talk through where you are, what you are working toward, and whether SMKYA is the right fit for you.
+          Let’s talk through where you are, what you are working toward, and whether SMKYA is the right fit for you.
         </p>
         <div class="cta-banner-buttons">
           <a href="contact.html" class="btn btn-accent">Book a Consultation</a>
@@ -409,8 +372,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <h2>SMKYA<span>.</span></h2>
-          <p>Holistic coaching combining fitness, nutrition, and psychological mindset support for sustainable, lifelong transformation.</p>
+          <img src="assets/logo/logo-white-transparent.png" alt="SMKYA" class="footer-logo-img">
+          <p>Holistic coaching combining fitness, nutrition, and mindset support for a sustainable transformation.</p>
           <div class="footer-socials">
             <a href="https://facebook.com/smkya.life" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://instagram.com/samaakhya" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
@@ -434,7 +397,6 @@
           <h4>Contact Us</h4>
           <ul class="footer-links-list">
             <li><a href="tel:+94721499479">+94 72 149 9479</a></li>
-            <li><a href="mailto:info@smkya.com">info@smkya.com</a></li>
             <li><a href="mailto:hello@smkya.com">hello@smkya.com</a></li>
           </ul>
         </div>

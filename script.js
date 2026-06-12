@@ -98,60 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== BEFORE / AFTER COMPARISON SLIDER =====
-  const sliderContainer = document.querySelector('.ba-slider-container');
-  const handle = document.querySelector('.ba-handle');
-  const afterImage = document.querySelector('.ba-image-after');
-
-  if (sliderContainer && handle && afterImage) {
-    let isDragging = false;
-
-    const setSliderPosition = (clientX) => {
-      const rect = sliderContainer.getBoundingClientRect();
-      const positionX = clientX - rect.left;
-      let percentage = (positionX / rect.width) * 100;
-      
-      // Clamp values between 0 and 100
-      if (percentage < 0) percentage = 0;
-      if (percentage > 100) percentage = 100;
-
-      // Update handle position and image clipping
-      handle.style.left = `${percentage}%`;
-      afterImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
-    };
-
-    // Desktop mouse events
-    sliderContainer.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      setSliderPosition(e.clientX);
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      setSliderPosition(e.clientX);
-    });
-
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    // Mobile touch events
-    sliderContainer.addEventListener('touchstart', (e) => {
-      isDragging = true;
-      setSliderPosition(e.touches[0].clientX);
-    }, { passive: true });
-
-    window.addEventListener('touchmove', (e) => {
-      if (!isDragging) return;
-      if (e.cancelable) e.preventDefault();
-      setSliderPosition(e.touches[0].clientX);
-    }, { passive: false });
-
-    window.addEventListener('touchend', () => {
-      isDragging = false;
-    });
-  }
-
   // ===== TESTIMONIALS DRAG & AUTO-SCROLL =====
   const marquee = document.querySelector('.testimonials-marquee');
   if (marquee) {
@@ -244,41 +190,114 @@ document.addEventListener('DOMContentLoaded', () => {
           <form action="#">
             <div class="form-group-row">
               <div class="form-group">
-                <label for="modal-first-name">First Name *</label>
-                <input type="text" id="modal-first-name" class="form-control" required placeholder="John">
+                <label for="modal-email">Email *</label>
+                <input type="email" id="modal-email" name="email" class="form-control" required placeholder="hello@example.com">
               </div>
               <div class="form-group">
+                <label for="modal-first-name">First Name *</label>
+                <input type="text" id="modal-first-name" name="first-name" class="form-control" required placeholder="First name">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
                 <label for="modal-last-name">Last Name *</label>
-                <input type="text" id="modal-last-name" class="form-control" required placeholder="Doe">
+                <input type="text" id="modal-last-name" name="last-name" class="form-control" required placeholder="Last name">
+              </div>
+              <div class="form-group">
+                <label for="modal-mobile-number">Mobile Number (including country code) *</label>
+                <input type="tel" id="modal-mobile-number" name="mobile-number" class="form-control" required placeholder="+94 72 149 9479">
               </div>
             </div>
             
             <div class="form-group-row">
               <div class="form-group">
-                <label for="modal-email">Email Address *</label>
-                <input type="email" id="modal-email" class="form-control" required placeholder="john@example.com">
+                <label for="modal-date-of-birth">Date of Birth *</label>
+                <input type="date" id="modal-date-of-birth" name="date-of-birth" class="form-control" required>
               </div>
               <div class="form-group">
-                <label for="modal-phone">Phone Number *</label>
-                <input type="tel" id="modal-phone" class="form-control" required placeholder="+94 72 149 9479">
+                <label for="modal-gender">Gender *</label>
+                <select id="modal-gender" name="gender" class="form-control" required>
+                  <option value="" disabled selected>Select gender</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="intersex">Intersex</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="modal-occupation">Occupation</label>
+                <input type="text" id="modal-occupation" name="occupation" class="form-control" placeholder="Your occupation">
+              </div>
+              <div class="form-group">
+                <label for="modal-weight">Weight *</label>
+                <input type="text" id="modal-weight" name="weight" class="form-control" required placeholder="e.g. 68kg">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="modal-country">Country of Residence *</label>
+                <input type="text" id="modal-country" name="country" class="form-control" required placeholder="Country">
+              </div>
+              <div class="form-group">
+                <label for="modal-address">Residential Address</label>
+                <input type="text" id="modal-address" name="address" class="form-control" placeholder="Residential address">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="modal-plan-select">What are you looking for? *</label>
-              <select id="modal-plan-select" class="form-control" required>
-                <option value="" disabled selected>Select service focus</option>
-                <option value="fitness">Fitness Coaching</option>
-                <option value="nutrition">Nutritional Guidance</option>
-                <option value="mindset">Mindset Support</option>
-                <option value="life">Life Coaching</option>
-                <option value="holistic">Combined Holistic Programme</option>
+              <label for="modal-health-conditions">Health Conditions *</label>
+              <textarea id="modal-health-conditions" name="health-conditions" class="form-control" rows="4" required placeholder="Asthma, PCOS, gastritis, ankle injury, depression, anxiety, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="modal-wellness-goals">Top 3 Wellness Goals *</label>
+              <textarea id="modal-wellness-goals" name="wellness-goals" class="form-control" rows="4" required placeholder="Sports-specific training, building self-confidence, weight loss, improving flexibility, building healthy habits, injury prevention/recovery"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="modal-ranked-goals">Rank Your Fitness / Life Goals *</label>
+              <textarea id="modal-ranked-goals" name="ranked-goals" class="form-control" rows="4" required placeholder="No.1 Build self-confidence, No.2 lose weight, No.3 improve flexibility"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="modal-program-select">Select the Program *</label>
+              <select id="modal-program-select" name="program" class="form-control" required>
+                <option value="" disabled selected>Select program</option>
+                <option value="life-coaching">Life Coaching with Samaakhya</option>
+                <option value="exercise-plan">SMKYA Individual / Couples Exercise Plan</option>
+                <option value="nutrition">SMKYA Nutrition Consultation and Guidance</option>
+                <option value="combination">A Combination of Packages</option>
               </select>
             </div>
 
-            <div class="form-group">
-              <label for="modal-message">Tell us about your goals, routine &amp; lifestyle *</label>
-              <textarea id="modal-message" class="form-control" rows="5" required placeholder="Let us know what goals you are chasing and where you currently feel stuck..."></textarea>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="modal-preferred-chat-date">Preferred Chat Date *</label>
+                <input type="date" id="modal-preferred-chat-date" name="preferred-chat-date" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="modal-preferred-chat-time">Preferred Chat Time *</label>
+                <select id="modal-preferred-chat-time" name="preferred-chat-time" class="form-control" required>
+                  <option value="" disabled selected>Select time</option>
+                  <option value="08:00">8:00 AM</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                </select>
+              </div>
             </div>
 
             <button type="submit" class="btn btn-accent">Submit Message</button>
