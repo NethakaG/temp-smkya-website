@@ -817,7 +817,7 @@ section {
   opacity: 0.08;
   position: absolute;
   top: 24px;
-  right: 28px;
+  left: 28px;
   pointer-events: none;
 }
 
@@ -1147,6 +1147,10 @@ section {
   color: var(--accent);
 }
 
+.contact-info-card .footer-social-link:hover {
+  color: var(--text-dark);
+}
+
 .booking-form {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-light);
@@ -1227,7 +1231,7 @@ select.form-control {
 .cta-banner-content h2 {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .cta-banner-buttons {
