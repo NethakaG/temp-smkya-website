@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
 
-            <button type="submit" class="btn btn-accent">Submit Message</button>
+            <button type="submit" class="btn form-submit-btn">Submit Message</button>
           </form>
         </div>
       </div>
