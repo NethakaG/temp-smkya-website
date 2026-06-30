@@ -630,6 +630,12 @@ section:not(.hero) {
   box-shadow: 0 10px 30px rgba(24, 24, 24, 0.08);
 }
 
+.process-grid .why-stat-card:hover {
+  transform: none;
+  border-color: var(--border-light);
+  box-shadow: none;
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
