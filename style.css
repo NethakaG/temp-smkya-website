@@ -1480,6 +1480,50 @@ select.form-control {
   color: var(--accent);
 }
 
+/* Legal Pages */
+.legal-section {
+  background-color: var(--bg-primary);
+}
+
+.legal-content {
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-content p {
+  margin-bottom: 18px;
+}
+
+.legal-content a {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-content h2,
+.legal-content h3 {
+  color: var(--text-primary);
+  margin-top: 42px;
+  margin-bottom: 14px;
+}
+
+.legal-content h2 {
+  font-size: 1.35rem;
+}
+
+.legal-content h3 {
+  font-size: 1.05rem;
+}
+
+.legal-updated {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
 /* Scroll reveal utility */
 .reveal, .reveal-left, .reveal-right, .reveal-fade, .reveal-card-up, .reveal-card-down {
   opacity: 0;
