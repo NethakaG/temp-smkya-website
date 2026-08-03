@@ -536,6 +536,17 @@ section:not(.hero) {
   gap: 32px;
 }
 
+@media (min-width: 769px) and (max-width: 1105px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(270px, 360px));
+    justify-content: center;
+  }
+
+  .services-grid .service-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
 .service-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-light);
@@ -715,6 +726,7 @@ section:not(.hero) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   box-sizing: border-box;
 }
@@ -1642,6 +1654,15 @@ select.form-control {
     grid-template-columns: 1fr;
     gap: 56px;
   }
+
+  .person-behind-story-link {
+    text-align: center;
+  }
+
+  .why-image {
+    width: min(78vw, 420px);
+    justify-self: center;
+  }
   
   .why-grid {
     grid-template-columns: 1fr;
@@ -1678,7 +1699,96 @@ select.form-control {
   }
 }
 
-@media (max-width: 855px) {
+@media (max-width: 865px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(84%, 340px);
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: calc(92px + env(safe-area-inset-top)) 28px calc(28px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition-slow);
+    box-shadow: -10px 0 30px rgba(24, 24, 24, 0.1);
+  }
+
+  .nav-menu.open {
+    right: 0;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-menu li,
+  .nav-menu-cta {
+    width: 100%;
+    max-width: none;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 8px 4px;
+    font-size: 0.85rem;
+  }
+
+  .nav-menu-cta {
+    display: block;
+    margin-top: 16px;
+  }
+
+  .nav-menu-cta .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 24px;
+  }
+
+  .nav-actions > .btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+
+  .hamburger span {
+    left: 10px;
+    width: 24px;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 12px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 21px;
+  }
+
+  .hamburger span:nth-child(3) {
+    bottom: 12px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 21px;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    bottom: 21px;
+  }
+}
+
+@media (max-width: 768px) {
   section {
     padding: 80px 0;
   }
@@ -2380,6 +2490,12 @@ select.form-control {
     padding: 14px 20px;
   }
 
+  .more-testimonials-btn {
+    width: auto;
+    min-height: 0;
+    padding: 16px 32px;
+  }
+
   .hero-grid .btn-outline {
     background-color: rgba(253, 252, 250, 0.82);
     backdrop-filter: blur(5px);
@@ -2521,5 +2637,122 @@ select.form-control {
   .reveal-masonry {
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/* Card proportion guardrails */
+.service-card {
+  --card-max-width: 360px;
+  --card-ratio: 3 / 4;
+}
+
+.why-stat-card,
+.service-card-meta,
+.nutrition-profile-card,
+.about-grid > .booking-form {
+  --card-max-width: 360px;
+  --card-ratio: 1 / 1;
+}
+
+.bounce-card {
+  --card-max-width: 320px;
+  --card-ratio: 16 / 19;
+}
+
+.about-quote-card {
+  --card-max-width: 420px;
+  --card-ratio: 4 / 5;
+}
+
+.service-card,
+.why-stat-card,
+.bounce-card,
+.service-card-meta,
+.nutrition-profile-card,
+.about-quote-card,
+.about-grid > .booking-form {
+  width: min(100%, var(--card-max-width)) !important;
+  max-width: var(--card-max-width);
+  aspect-ratio: var(--card-ratio);
+  height: auto;
+  justify-self: center;
+  margin-inline: auto;
+}
+
+.services-grid,
+.why-stats-grid,
+.process-grid {
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .service-card,
+  .why-stat-card,
+  .bounce-card,
+  .service-card-meta,
+  .nutrition-profile-card,
+  .about-quote-card,
+  .about-grid > .booking-form {
+    width: min(100%, 88vw, var(--card-max-width)) !important;
+  }
+
+}
+
+/* Preserve the original card layout in The person behind the programme. */
+.person-behind-cards {
+  align-items: stretch;
+}
+
+.person-behind-cards .why-stat-card {
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: auto;
+  height: auto;
+  justify-self: stretch;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .person-behind-cards {
+    gap: 32px;
+  }
+
+  .person-behind-story-link {
+    margin-top: 32px !important;
+  }
+}
+
+/* Preserve the original card layout on the Services page. */
+.services-page .service-card-meta,
+.services-page .nutrition-profile-card,
+.services-page .process-grid .why-stat-card {
+  width: auto !important;
+  max-width: none !important;
+  aspect-ratio: auto;
+  height: auto;
+  min-height: 0;
+  justify-self: stretch;
+  margin: 0 !important;
+}
+
+.services-page .process-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: normal;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.blog-grid .blog-card {
+  width: auto !important;
+  max-width: none !important;
+  aspect-ratio: auto;
+  height: auto;
+  justify-self: stretch;
+  margin: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .services-page .process-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

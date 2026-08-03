@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 855 && navMenu.classList.contains('open')) {
+      if (window.innerWidth > 865 && navMenu.classList.contains('open')) {
         closeMobileMenu();
       }
     });
