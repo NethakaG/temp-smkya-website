@@ -644,11 +644,25 @@ section:not(.hero) {
 .why-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-areas:
+    "intro image"
+    "details image";
+  column-gap: 80px;
+  row-gap: 0;
   align-items: center;
 }
 
+.person-behind-intro {
+  grid-area: intro;
+}
+
+.person-behind-details {
+  grid-area: details;
+  min-width: 0;
+}
+
 .why-image {
+  grid-area: image;
   max-width: 420px;
   width: 100%;
   margin: 0 auto;
@@ -1666,7 +1680,15 @@ select.form-control {
   
   .why-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "image"
+      "details";
     gap: 0;
+  }
+
+  .why-image {
+    margin: 0 auto 40px;
   }
 
   .why-content {
@@ -2159,7 +2181,6 @@ select.form-control {
   }
 
   .about-grid,
-  .why-grid,
   .contact-grid {
     gap: 40px;
   }
@@ -2752,6 +2773,22 @@ select.form-control {
   margin: 0 !important;
 }
 
+/* Preserve the original card layout on the About page. */
+.about-page .about-quote-card,
+.about-page .about-features .about-feature {
+  width: auto !important;
+  max-width: none !important;
+  aspect-ratio: auto;
+  height: auto;
+  min-height: 0;
+  justify-self: stretch;
+  margin: 0 !important;
+}
+
+.about-page .about-features {
+  align-items: stretch;
+}
+
 @media (max-width: 992px) {
   .services-page .process-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -2777,5 +2814,65 @@ select.form-control {
 
   .services-grid .service-card:last-child {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page > .hero,
+  .services-page > .hero,
+  .blog-page > .hero,
+  .testimonials-page > .hero,
+  .contact-page > .hero {
+    padding-bottom: 32px !important;
+  }
+
+  .about-page > .hero + section,
+  .blog-page > .hero + section,
+  .testimonials-page > .hero + section,
+  .contact-page > .hero + section,
+  .services-page > .hero + .service-detail-section {
+    padding-top: 24px !important;
+  }
+}
+
+.about-page > .hero,
+.services-page > .hero {
+  background-position: center top !important;
+}
+
+/* Start image-backed page heroes below the fixed navigation. */
+@media (min-width: 769px) {
+  .about-page > .hero,
+  .services-page > .hero,
+  .contact-page > .hero {
+    margin-top: 81px;
+    padding-top: 79px !important;
+  }
+
+  .about-page > .hero {
+    min-height: calc(60vh - 81px) !important;
+  }
+
+  .services-page > .hero,
+  .contact-page > .hero {
+    min-height: calc(50vh - 81px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page > .hero,
+  .services-page > .hero,
+  .contact-page > .hero {
+    margin-top: 73px;
+    padding-top: 47px !important;
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-page > .hero,
+  .services-page > .hero,
+  .contact-page > .hero {
+    padding-top: 31px !important;
   }
 }
