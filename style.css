@@ -45,6 +45,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: var(--accent) var(--bg-primary);
   scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -124,7 +125,7 @@ textarea {
 
 section {
   position: relative;
-  padding: 120px 0;
+  padding: 40px 0;
 }
 
 section:not(.hero) {
@@ -331,6 +332,15 @@ section:not(.hero) {
   padding-top: 140px;
 }
 
+.about-page > .hero > .container,
+.services-page > .hero > .container,
+.contact-page > .hero > .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -487,9 +497,15 @@ section:not(.hero) {
 
 .about-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+  .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .about-feature {
@@ -726,9 +742,26 @@ section:not(.hero) {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 290px));
+  grid-template-columns: repeat(3, minmax(240px, 290px));
   justify-content: center;
   gap: 32px;
+}
+
+@media (max-width: 960px) {
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(240px, 290px));
+  }
+
+  .process-grid > :nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 645px) {
+  .process-grid > :nth-child(3) {
+    grid-column: auto;
+  }
 }
 
 .process-grid .why-stat-card {
@@ -1360,7 +1393,8 @@ select.form-control {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(240px, 290px));
+  justify-content: center;
   gap: 32px;
   margin-top: 56px;
 }
@@ -1373,6 +1407,9 @@ select.form-control {
   transition: var(--transition-normal);
   display: flex;
   flex-direction: column;
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .blog-card:hover {
@@ -1812,7 +1849,7 @@ select.form-control {
 
 @media (max-width: 768px) {
   section {
-    padding: 80px 0;
+    padding: 40px 0;
   }
   
   .nav-menu {
@@ -1875,9 +1912,6 @@ select.form-control {
     gap: 20px;
   }
 
-  .about-features {
-    grid-template-columns: 1fr;
-  }
 
   .grid-3 {
     grid-template-columns: 1fr;
@@ -2019,7 +2053,7 @@ select.form-control {
   }
 
   section {
-    padding-block: 72px;
+    padding-block: 40px;
   }
 
   .nav-header.scrolled {
@@ -2164,7 +2198,6 @@ select.form-control {
     gap: 24px;
   }
 
-  .blog-grid,
   .pricing-grid,
   .trainers-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -2470,7 +2503,7 @@ select.form-control {
   }
 
   section {
-    padding-block: 56px;
+    padding-block: 40px;
   }
 
   .hero {
@@ -2509,12 +2542,6 @@ select.form-control {
     width: 100%;
     min-height: 48px;
     padding: 14px 20px;
-  }
-
-  .more-testimonials-btn {
-    width: auto;
-    min-height: 0;
-    padding: 16px 32px;
   }
 
   .hero-grid .btn-outline {
@@ -2764,14 +2791,6 @@ select.form-control {
   align-items: stretch;
 }
 
-.blog-grid .blog-card {
-  width: auto !important;
-  max-width: none !important;
-  aspect-ratio: auto;
-  height: auto;
-  justify-self: stretch;
-  margin: 0 !important;
-}
 
 /* Preserve the original card layout on the About page. */
 .about-page .about-quote-card,
@@ -2796,23 +2815,27 @@ select.form-control {
 }
 
 @media (min-width: 653px) and (max-width: 1105px) {
-  .services-grid {
+  .services-grid,
+  .blog-grid {
     grid-template-columns: repeat(2, 290px) !important;
     justify-content: center;
   }
 
-  .services-grid .service-card:last-child {
+  .services-grid .service-card:last-child,
+  .blog-grid .blog-card:last-child {
     grid-column: 1 / -1;
     justify-self: center;
   }
 }
 
 @media (max-width: 652px) {
-  .services-grid {
+  .services-grid,
+  .blog-grid {
     grid-template-columns: minmax(0, 1fr) !important;
   }
 
-  .services-grid .service-card:last-child {
+  .services-grid .service-card:last-child,
+  .blog-grid .blog-card:last-child {
     grid-column: auto;
   }
 }
@@ -2835,7 +2858,10 @@ select.form-control {
   }
 }
 
-.about-page > .hero,
+.about-page > .hero {
+  background-position: center 20% !important;
+}
+
 .services-page > .hero {
   background-position: center top !important;
 }
@@ -2875,4 +2901,64 @@ select.form-control {
   .contact-page > .hero {
     padding-top: 31px !important;
   }
+}
+
+.contact-page .hero .hero-title,
+.contact-page .hero .hero-title span,
+.contact-page .hero .hero-description {
+  color: #ffffff !important;
+}
+
+/* About page hero title line breaking */
+@media (min-width: 769px) {
+  .about-hero-title .desktop-title {
+    display: block !important;
+  }
+  .about-hero-title .mobile-title {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-title .desktop-title {
+    display: none !important;
+  }
+  .about-hero-title .mobile-title {
+    display: block !important;
+    font-size: clamp(1.65rem, 6.5vw, 2.75rem);
+    line-height: 1.15;
+  }
+  .about-hero-title .mobile-title span {
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+}
+
+/* Services page hero title line breaking */
+@media (min-width: 631px) {
+  .services-hero-title .desktop-services-title {
+    display: block !important;
+  }
+  .services-hero-title .mobile-services-title {
+    display: none !important;
+  }
+}
+
+@media (max-width: 630px) {
+  .services-hero-title .desktop-services-title {
+    display: none !important;
+  }
+  .services-hero-title .mobile-services-title {
+    display: block !important;
+    font-size: clamp(1.75rem, 6.5vw, 2.5rem);
+    line-height: 1.15;
+  }
+}
+
+/* Enforce 50% left-half width limit for hero descriptions on About, Services, and Contact pages */
+.about-page .hero .hero-description,
+.services-page .hero .hero-description,
+.contact-page .hero .hero-description {
+  max-width: 50% !important;
+  width: 50% !important;
 }
