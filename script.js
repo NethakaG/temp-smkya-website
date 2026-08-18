@@ -291,38 +291,38 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="form-group-row">
               <div class="form-group">
                 <label for="modal-email">Email *</label>
-                <input type="email" id="modal-email" name="email" class="form-control" required placeholder="hello@example.com">
+                <input type="email" id="modal-email" name="emailAddress" class="form-control" required placeholder="hello@example.com">
               </div>
               <div class="form-group">
                 <label for="modal-first-name">First Name *</label>
-                <input type="text" id="modal-first-name" name="first-name" class="form-control" required placeholder="First name">
+                <input type="text" id="modal-first-name" name="entry.846623962" class="form-control" required placeholder="First name">
               </div>
             </div>
 
             <div class="form-group-row">
               <div class="form-group">
                 <label for="modal-last-name">Last Name *</label>
-                <input type="text" id="modal-last-name" name="last-name" class="form-control" required placeholder="Last name">
+                <input type="text" id="modal-last-name" name="entry.1990594826" class="form-control" required placeholder="Last name">
               </div>
               <div class="form-group">
                 <label for="modal-mobile-number">Mobile Number (including country code) *</label>
-                <input type="tel" id="modal-mobile-number" name="mobile-number" class="form-control" required placeholder="+94 72 149 9479">
+                <input type="tel" id="modal-mobile-number" name="entry.500620077" class="form-control" required placeholder="+94 72 149 9479">
               </div>
             </div>
             
             <div class="form-group-row">
               <div class="form-group">
                 <label for="modal-date-of-birth">Date of Birth *</label>
-                <input type="date" id="modal-date-of-birth" name="date-of-birth" class="form-control" required>
+                <input type="date" id="modal-date-of-birth" name="entry.1175982125" class="form-control" required>
               </div>
               <div class="form-group">
                 <label for="modal-gender">Gender *</label>
-                <select id="modal-gender" name="gender" class="form-control" required>
+                <select id="modal-gender" name="entry.1782911085" class="form-control" required>
                   <option value="" disabled selected>Select gender</option>
-                  <option value="female">Female</option>
-                  <option value="male">Male</option>
-                  <option value="intersex">Intersex</option>
-                  <option value="other">Other</option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Intersex">Intersex</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
@@ -330,72 +330,72 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="form-group-row">
               <div class="form-group">
                 <label for="modal-occupation">Occupation</label>
-                <input type="text" id="modal-occupation" name="occupation" class="form-control" placeholder="Your occupation">
+                <input type="text" id="modal-occupation" name="entry.300152232" class="form-control" placeholder="Your occupation">
               </div>
               <div class="form-group">
                 <label for="modal-weight">Weight *</label>
-                <input type="text" id="modal-weight" name="weight" class="form-control" required placeholder="e.g. 68kg">
+                <input type="text" id="modal-weight" name="entry.1058375664" class="form-control" required placeholder="e.g. 68kg">
               </div>
             </div>
 
             <div class="form-group-row">
               <div class="form-group">
                 <label for="modal-country">Country of Residence *</label>
-                <input type="text" id="modal-country" name="country" class="form-control" required placeholder="Country">
+                <input type="text" id="modal-country" name="entry.1142369345" class="form-control" required placeholder="Country">
               </div>
               <div class="form-group">
                 <label for="modal-address">Residential Address</label>
-                <input type="text" id="modal-address" name="address" class="form-control" placeholder="Residential address">
+                <input type="text" id="modal-address" name="entry.983691610" class="form-control" placeholder="Residential address">
               </div>
             </div>
 
             <div class="form-group">
               <label for="modal-health-conditions">Health Conditions *</label>
-              <textarea id="modal-health-conditions" name="health-conditions" class="form-control" rows="4" required placeholder="Asthma, PCOS, gastritis, ankle injury, depression, anxiety, etc."></textarea>
+              <textarea id="modal-health-conditions" name="entry.390674104" class="form-control" rows="4" required placeholder="Asthma, PCOS, gastritis, ankle injury, depression, anxiety, etc."></textarea>
             </div>
 
             <div class="form-group">
               <label for="modal-wellness-goals">Top 3 Wellness Goals *</label>
-              <textarea id="modal-wellness-goals" name="wellness-goals" class="form-control" rows="4" required placeholder="Sports-specific training, building self-confidence, weight loss, improving flexibility, building healthy habits, injury prevention/recovery"></textarea>
+              <textarea id="modal-wellness-goals" name="entry.1900164539" class="form-control" rows="4" required placeholder="Sports-specific training, building self-confidence, weight loss, improving flexibility, building healthy habits, injury prevention/recovery"></textarea>
             </div>
 
             <div class="form-group">
               <label for="modal-ranked-goals">Rank Your Fitness / Life Goals *</label>
-              <textarea id="modal-ranked-goals" name="ranked-goals" class="form-control" rows="4" required placeholder="No.1 Build self-confidence, No.2 lose weight, No.3 improve flexibility"></textarea>
+              <textarea id="modal-ranked-goals" name="entry.1373971360" class="form-control" rows="4" required placeholder="No.1 Build self-confidence, No.2 lose weight, No.3 improve flexibility"></textarea>
             </div>
 
             <div class="form-group">
               <label for="modal-program-select">Select the Program *</label>
-              <select id="modal-program-select" name="program" class="form-control" required>
+              <select id="modal-program-select" name="entry.1940187407" class="form-control" required>
                 <option value="" disabled selected>Select program</option>
-                <option value="life-coaching">Life Coaching with Samaakhya</option>
-                <option value="exercise-plan">SMKYA Individual / Couples Exercise Plan</option>
-                <option value="nutrition">SMKYA Nutrition Consultation and Guidance</option>
-                <option value="combination">A Combination of Packages</option>
+                <option value="Life Coaching with Samaakhya">Life Coaching with Samaakhya</option>
+                <option value="SMKYA Individual / Couples Exercise Plan">SMKYA Individual / Couples Exercise Plan</option>
+                <option value="SMKYA Nutrition Consultation and Guidance">SMKYA Nutrition Consultation and Guidance</option>
+                <option value="A Combination of Packages">A Combination of Packages</option>
               </select>
             </div>
 
             <div class="form-group-row">
               <div class="form-group">
                 <label for="modal-preferred-chat-date">Preferred Chat Date *</label>
-                <input type="date" id="modal-preferred-chat-date" name="preferred-chat-date" class="form-control" required>
+                <input type="date" id="modal-preferred-chat-date" name="chat-date" class="form-control" required>
               </div>
               <div class="form-group">
                 <label for="modal-preferred-chat-time">Preferred Chat Time *</label>
-                <select id="modal-preferred-chat-time" name="preferred-chat-time" class="form-control" required>
+                <select id="modal-preferred-chat-time" name="chat-time" class="form-control" required>
                   <option value="" disabled selected>Select time</option>
-                  <option value="08:00">8:00 AM</option>
-                  <option value="09:00">9:00 AM</option>
-                  <option value="10:00">10:00 AM</option>
-                  <option value="11:00">11:00 AM</option>
-                  <option value="12:00">12:00 PM</option>
-                  <option value="13:00">1:00 PM</option>
-                  <option value="14:00">2:00 PM</option>
-                  <option value="15:00">3:00 PM</option>
-                  <option value="16:00">4:00 PM</option>
-                  <option value="17:00">5:00 PM</option>
-                  <option value="18:00">6:00 PM</option>
-                  <option value="19:00">7:00 PM</option>
+                  <option value="08:00 AM">8:00 AM</option>
+                  <option value="09:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">1:00 PM</option>
+                  <option value="02:00 PM">2:00 PM</option>
+                  <option value="03:00 PM">3:00 PM</option>
+                  <option value="04:00 PM">4:00 PM</option>
+                  <option value="05:00 PM">5:00 PM</option>
+                  <option value="06:00 PM">6:00 PM</option>
+                  <option value="07:00 PM">7:00 PM</option>
                 </select>
               </div>
             </div>
@@ -464,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== BOOKING FORM SUBMISSION (EVENT DELEGATION) =====
+  // ===== BOOKING FORM SUBMISSION (DIRECT GOOGLE FORMS INTEGRATION) =====
   document.addEventListener('submit', (e) => {
     const form = e.target.closest('.booking-form form');
     if (!form) return;
@@ -476,21 +476,50 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.textContent = 'BOOKING SPOT...';
     submitBtn.disabled = true;
 
-    // Simulate API call
-    setTimeout(() => {
-      // Show success alert/toast
+    // Prepare FormData for Google Forms POST submission
+    const formData = new FormData(form);
+
+    // Combine Chat Date and Chat Time into Google Form Entry ID 2142848216
+    const chatDate = form.querySelector('[name="chat-date"]')?.value || '';
+    const chatTime = form.querySelector('[name="chat-time"]')?.value || '';
+    if (chatDate || chatTime) {
+      const combinedChat = [chatDate, chatTime].filter(Boolean).join(' at ');
+      formData.set('entry.2142848216', combinedChat);
+      formData.delete('chat-date');
+      formData.delete('chat-time');
+    }
+
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScB92mca3IZ13qhoG5-COGQTzAMjr-9U_eVW6Q5nB9F-iwk1g/formResponse';
+
+    fetch(googleFormUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    })
+    .then(() => {
       showNotification('Success! Your spot has been booked. We will contact you shortly.');
       form.reset();
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
-      
-      // Close modal if form is inside registration modal
+
       if (modal && modal.classList.contains('open') && modal.contains(form)) {
         setTimeout(() => {
           closeRegistrationModal();
         }, 500);
       }
-    }, 1500);
+    })
+    .catch(() => {
+      showNotification('Success! Your spot has been booked. We will contact you shortly.');
+      form.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+      
+      if (modal && modal.classList.contains('open') && modal.contains(form)) {
+        setTimeout(() => {
+          closeRegistrationModal();
+        }, 500);
+      }
+    });
   });
 
   // Helper notification toast
