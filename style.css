@@ -390,6 +390,30 @@ section:not(.hero) {
   color: var(--text-primary);
 }
 
+.hero-title .hero-life-desktop {
+  display: inline;
+  color: inherit;
+}
+
+.hero-title .hero-life-mobile {
+  display: none;
+  color: var(--text-primary);
+}
+
+@media (max-width: 430px) {
+  .home-hero .hero-life-desktop {
+    display: none;
+  }
+
+  .home-hero .hero-title-final {
+    white-space: nowrap;
+  }
+
+  .home-hero .hero-life-mobile {
+    display: inline;
+  }
+}
+
 .hero-description {
   font-size: 1.125rem;
   color: var(--text-muted);
