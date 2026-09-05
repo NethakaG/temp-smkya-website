@@ -1,0 +1,70 @@
+# Redirect physical and legacy URLs to their canonical public URLs.
+/index.html                                                       /                                      301!
+/about.html                                                       /about                                 301!
+/services.html                                                    /services                              301!
+/testimonials.html                                                /testimonials                          301!
+/blog.html                                                        /blog                                  301!
+/contact.html                                                     /contact                               301!
+/privacy-policy.html                                              /privacy-policy                        301!
+/terms.html                                                       /terms-of-use                          301!
+/terms                                                            /terms-of-use                          301!
+/terms/                                                           /terms-of-use                          301!
+/join                                                             /contact                               301!
+/join/                                                            /contact                               301!
+/join.html                                                        /contact                               301!
+
+# Preserve the established Wix blog URLs and consolidate old file paths.
+/blog/transform-your-life-with-personalized-wellness-coaching.html /post/transform-your-life-with-personalized-wellness-coaching     301!
+/blog/transform-your-life-with-personalized-wellness-coaching      /post/transform-your-life-with-personalized-wellness-coaching     301!
+/blog/transform-your-life-with-personalized-wellness-coaching/     /post/transform-your-life-with-personalized-wellness-coaching     301!
+/post/transform-your-life-with-personalized-wellness-coaching.html /post/transform-your-life-with-personalized-wellness-coaching     301!
+/post/transform-your-life-with-personalized-wellness-coaching/     /post/transform-your-life-with-personalized-wellness-coaching     301!
+
+/blog/nutritional-guidance-for-sustainable-health-and-wellness.html /post/nutritional-guidance-for-sustainable-health-and-wellness   301!
+/blog/nutritional-guidance-for-sustainable-health-and-wellness      /post/nutritional-guidance-for-sustainable-health-and-wellness   301!
+/blog/nutritional-guidance-for-sustainable-health-and-wellness/     /post/nutritional-guidance-for-sustainable-health-and-wellness   301!
+/post/nutritional-guidance-for-sustainable-health-and-wellness.html /post/nutritional-guidance-for-sustainable-health-and-wellness   301!
+/post/nutritional-guidance-for-sustainable-health-and-wellness/     /post/nutritional-guidance-for-sustainable-health-and-wellness   301!
+
+/blog/achieve-your-fitness-goals-through-evidence-based-coaching.html /post/achieve-your-fitness-goals-through-evidence-based-coaching 301!
+/blog/achieve-your-fitness-goals-through-evidence-based-coaching      /post/achieve-your-fitness-goals-through-evidence-based-coaching 301!
+/blog/achieve-your-fitness-goals-through-evidence-based-coaching/     /post/achieve-your-fitness-goals-through-evidence-based-coaching 301!
+/post/achieve-your-fitness-goals-through-evidence-based-coaching.html /post/achieve-your-fitness-goals-through-evidence-based-coaching 301!
+/post/achieve-your-fitness-goals-through-evidence-based-coaching/     /post/achieve-your-fitness-goals-through-evidence-based-coaching 301!
+
+# Consolidate service detail duplicates.
+/services/fitness-coaching.html                                   /services/fitness-coaching             301!
+/services/fitness-coaching/                                      /services/fitness-coaching             301!
+/services/life-coaching.html                                      /services/life-coaching                301!
+/services/life-coaching/                                         /services/life-coaching                301!
+/services/mindset-support.html                                    /services/mindset-support              301!
+/services/mindset-support/                                       /services/mindset-support              301!
+/services/nutrition-guidance.html                                 /services/nutrition-guidance           301!
+/services/nutrition-guidance/                                    /services/nutrition-guidance           301!
+
+# Consolidate trailing-slash versions of the main pages.
+/about/                                                           /about                                 301!
+/services/                                                        /services                              301!
+/testimonials/                                                    /testimonials                          301!
+/blog/                                                            /blog                                  301!
+/contact/                                                         /contact                               301!
+/privacy-policy/                                                  /privacy-policy                        301!
+/terms-of-use/                                                    /terms-of-use                          301!
+
+# Serve static HTML files at clean public URLs without changing the browser URL.
+/about                                                            /about.html                            200
+/services                                                         /services.html                         200
+/testimonials                                                     /testimonials.html                     200
+/blog                                                             /blog.html                             200
+/contact                                                          /contact.html                          200
+/privacy-policy                                                   /privacy-policy.html                   200
+/terms-of-use                                                     /terms.html                            200
+
+/post/transform-your-life-with-personalized-wellness-coaching     /blog/transform-your-life-with-personalized-wellness-coaching.html 200
+/post/nutritional-guidance-for-sustainable-health-and-wellness    /blog/nutritional-guidance-for-sustainable-health-and-wellness.html 200
+/post/achieve-your-fitness-goals-through-evidence-based-coaching  /blog/achieve-your-fitness-goals-through-evidence-based-coaching.html 200
+
+/services/fitness-coaching                                        /services/fitness-coaching.html        200
+/services/life-coaching                                           /services/life-coaching.html           200
+/services/mindset-support                                         /services/mindset-support.html         200
+/services/nutrition-guidance                                      /services/nutrition-guidance.html      200

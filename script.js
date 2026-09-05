@@ -277,8 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== REGISTRATION MODAL INJECTION & LOGIC =====
   
-  // 1. Inject modal if not on contact.html
-  const isContactPage = window.location.pathname.endsWith('contact.html');
+  // 1. Inject modal unless the current route is the contact page.
+  const isContactPage = /(?:^|\/)contact(?:\.html)?\/?$/.test(window.location.pathname);
   
   if (!isContactPage) {
     const modalHTML = `
